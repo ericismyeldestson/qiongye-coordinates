@@ -1,0 +1,13 @@
+{
+  "source": "GeoNames existing local catalog; macOS IANA zoneinfo",
+  "source_sha256": "0fbe97c0ab9bf6dd8d477d0f39af152cc467144601b25d4b2cd12d0ec3ee99dc",
+  "cities": 4412,
+  "zones": 328,
+  "supported_years": [
+    1900,
+    2099
+  ],
+  "coordinates": "WGS84 city centers; manual coordinates supported",
+  "timezone_offset_unit": "seconds; includes historical offsets and DST",
+  "generated_at": "2026-09-15T03:11:26.747322+00:00"
+}

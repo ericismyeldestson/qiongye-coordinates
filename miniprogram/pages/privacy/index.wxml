@@ -1,0 +1,10 @@
+<view class="page privacy-page">
+ <view class="eyebrow">穹野坐标</view>
+ <view class="privacy-title">你的资料如何使用</view>
+ <view class="notice">计算在设备内完成。主动保存、复制和分享时，资料会随结果一起提供。</view>
+ <view class="card"><view class="card-title">计算与临时资料</view><view>称呼、出生日期与时间、出生地点、坐标和时区用于生成星图。小程序不向开发者服务器上传这些资料，也不主动建立个人档案或保存历史记录。</view><view class="privacy-paragraph">当前会话用内存处理资料；生成的临时图片由微信管理。</view></view>
+ <view class="card"><view class="card-title">保存图片与复制结果</view><view>结果图片包含称呼、出生时间、地点和当前星图。选择保存时，图片写入你允许使用的相册。</view><view class="privacy-paragraph">复制完整计算结果时，出生资料、坐标、时区和计算结果会写入系统剪贴板。复制资料来源时，仅复制对应来源链接。</view></view>
+ <view class="card"><view class="card-title">好友与朋友圈分享</view><view>使用页面按钮或右上角“···”分享，都可能带上当前资料。分享页面包含称呼、完整出生日期与时间、出生地点、坐标、时区、宫制，以及当前所选地点和结果视图。</view><view class="privacy-paragraph">接收者可从分享页面还原星图，查看其中资料，并再次转发。请在分享前确认你愿意让接收者看到这些内容；涉及他人资料时，也请先取得对方同意。</view></view>
+ <view class="card"><view class="card-title">关闭后，副本仍可能保留</view><view>关闭小程序不会删除相册图片、剪贴板内容或微信中的分享记录，也不会撤回已发给他人的资料。你可在相册、剪贴板或微信中管理自己的副本，接收者保存的副本由其管理。</view></view>
+ <view class="footer">返回上一页可继续查看或填写资料</view>
+</view>

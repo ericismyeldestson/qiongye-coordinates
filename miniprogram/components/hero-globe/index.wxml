@@ -1,0 +1,4 @@
+<view class="globe" aria-hidden="true">
+ <view wx:if="{{!ready}}" class="globe-fallback"></view>
+ <canvas wx:if="{{!failed}}" class="globe-canvas {{ready ? 'is-ready' : ''}}" type="webgl" binderror="onCanvasError"></canvas>
+</view>

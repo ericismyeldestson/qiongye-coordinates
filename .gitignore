@@ -1,0 +1,8 @@
+node_modules/
+verification/
+release/
+project.private.config.json
+.DS_Store
+.env
+.env.*
+*-legacy-*/

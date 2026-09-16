@@ -1,0 +1,282 @@
+{
+  "version": "0.4.0",
+  "reviewedAt": "2026-09-16",
+  "scope": "Every file inside miniprogram; new files require explicit origin review. Hashes detect changes but do not grant rights.",
+  "components": {
+    "application": {
+      "license": "AGPL-3.0-only",
+      "origin": "Locally developed native Mini Program, independently authored geometry, recommendation rules, Chinese interpretations, rendering and export.",
+      "notice": "LICENSE"
+    },
+    "swiss-build": {
+      "license": "AGPL-3.0-only AND Emscripten-runtime-notices",
+      "origin": "Official pinned Swiss C source, project C wrapper, Emscripten 4.0.15.",
+      "notice": "THIRD-PARTY-NOTICES.md",
+      "manifest": "vendor-manifest.json"
+    },
+    "swiss-data": {
+      "license": "AGPL-3.0-only",
+      "origin": "Unmodified official Swiss ephemerides, renamed to .bin.",
+      "notice": "third_party/swisseph/LICENSE",
+      "manifest": "third_party/swisseph/provenance.json"
+    },
+    "geonames": {
+      "license": "CC-BY-4.0",
+      "origin": "Modified GeoNames catalog; selected fields, aliases and candidates.",
+      "notice": "miniprogram/licenses/CC-BY-4.0.txt",
+      "manifest": "third_party/geonames/manifest.json"
+    },
+    "natural-earth": {
+      "license": "Public-domain",
+      "origin": "Natural Earth land; rounded exterior rings.",
+      "notice": "THIRD-PARTY-NOTICES.md",
+      "manifest": "third_party/natural-earth/provenance.json"
+    },
+    "iana": {
+      "license": "Public-domain-data",
+      "origin": "Precomputed IANA civil-time offsets.",
+      "notice": "miniprogram/licenses/IANA.txt",
+      "manifest": "locations-manifest.json"
+    },
+    "notices": {
+      "license": "Original notices retained; see each document",
+      "origin": "Official license documents and generated notice display.",
+      "notice": "THIRD-PARTY-NOTICES.md"
+    },
+    "birth-facts": {
+      "license": "AGPL-3.0-only for program code; factual metadata individually attributed",
+      "origin": "Original app logic, concise Bruce Lee/Yao Ming birth facts with source/rating; no images or biographies.",
+      "notice": "THIRD-PARTY-NOTICES.md"
+    }
+  },
+  "files": {
+    "miniprogram/app.js": {
+      "component": "application",
+      "sha256": "1ab645c73bcea61604f9cc4805a752ab9ba8fb66813d8c57cad34328c0ce4109"
+    },
+    "miniprogram/app.json": {
+      "component": "application",
+      "sha256": "7cd2e33fa0ca2e1b0e0f67f9aac49e01d22c544df4a5a619fe83751348485ec5"
+    },
+    "miniprogram/app.wxss": {
+      "component": "application",
+      "sha256": "e699bfddc95a16ad428992badb909a73d90d1733c30e3021bcad1308809b327f"
+    },
+    "miniprogram/components/hero-globe/index.js": {
+      "component": "application",
+      "sha256": "8acadae00c85f92818de21886aaeb99008dd16e611e220f83afe6ce70192db4b"
+    },
+    "miniprogram/components/hero-globe/index.json": {
+      "component": "application",
+      "sha256": "6bcc2e9e536384851fcfbdd823aee8ae4331243636adc4a656a64a44d9cf9318"
+    },
+    "miniprogram/components/hero-globe/index.wxml": {
+      "component": "application",
+      "sha256": "6b9f270e50378b54afbc3f74b117663f955fa8efe82d8b67be64ef0f1d2bd55e"
+    },
+    "miniprogram/components/hero-globe/index.wxss": {
+      "component": "application",
+      "sha256": "1e916e028489d38f1e4d5c7fd34c6bd01e9a216fd9affa7efaa18acdc343315c"
+    },
+    "miniprogram/components/hero-globe/renderer.js": {
+      "component": "application",
+      "sha256": "84d5cca5c0f7a8a496fca4ecfc0c4673179b426970df63832ef8429ff7cc912f"
+    },
+    "miniprogram/components/hero-globe/scene.js": {
+      "component": "application",
+      "sha256": "23387906af9e208db52cffd5d8f6a856f5d55e872cc813527e1321d12df1a7be"
+    },
+    "miniprogram/components/hero-globe/texture.js": {
+      "component": "application",
+      "sha256": "53b96597e96e987cef52f01df711e76f39aedd79feae35b6bf166982f5aa8858"
+    },
+    "miniprogram/core/birth.js": {
+      "component": "application",
+      "sha256": "6e9baf3c961cefa66d7464cda501f116387fb4efa837b46da1a8d1466f309b6f"
+    },
+    "miniprogram/core/capabilities.js": {
+      "component": "application",
+      "sha256": "3d7175246d2813727ae5332c94a58f0abfcdc17962f18de7475fd1cb5eb6280b"
+    },
+    "miniprogram/core/chart.js": {
+      "component": "application",
+      "sha256": "ee2e46881c286a9c8d7a26694e254c253a32c7153f8f32755df07afef0269f7c"
+    },
+    "miniprogram/core/engine.js": {
+      "component": "application",
+      "sha256": "7b05ad5fc2532fa932eff6c2c7a2f13b36240cb477dc5048c72910ba0d37c33c"
+    },
+    "miniprogram/core/export.js": {
+      "component": "application",
+      "sha256": "59744f7f843d19cfc9eb3b2704e4811606fcf6a9749cdcce4ff6e103c4b45f48"
+    },
+    "miniprogram/core/locations.js": {
+      "component": "birth-facts",
+      "sha256": "4050f0be4a68b7808124079e2826e3e206242a85f6ffb889658f65fe26e4986b"
+    },
+    "miniprogram/core/place-rules.js": {
+      "component": "application",
+      "sha256": "6e94f67ec385adac507d413289a666efad7c870e97c77dd3e1d1641ed5060486"
+    },
+    "miniprogram/core/poster.js": {
+      "component": "application",
+      "sha256": "6eeb9aee7466c96d2932cb0cc233e10a4fb7a6f62658615db8ae96c379234b51"
+    },
+    "miniprogram/core/recommendations.js": {
+      "component": "application",
+      "sha256": "2408e0183d30e8122088a8b43e2e616a89a5a16bd0d7a4c58e6caaf54282f289"
+    },
+    "miniprogram/core/render.js": {
+      "component": "application",
+      "sha256": "5763a61c55cb3f2c591339cb1d93222b84242fcda32c80a5d1a19d1a0dd463fd"
+    },
+    "miniprogram/core/share.js": {
+      "component": "application",
+      "sha256": "806e8bcfa8ccfae0925731d05b95be09177a039f8d289d9fb92d2c8e685e2413"
+    },
+    "miniprogram/core/sky-lines.js": {
+      "component": "application",
+      "sha256": "ba08fca7641f3f5b433130e3f9aed0e6a1548680c3f3ee8f0a20f2c3773db915"
+    },
+    "miniprogram/core/time.js": {
+      "component": "application",
+      "sha256": "95f90492d457108891a09d288f792fbd52efaa1af6a96cd23567db11fb5f4674"
+    },
+    "miniprogram/data/candidates.js": {
+      "component": "geonames",
+      "sha256": "c0569dc7118bc795ed91247688739071545361589fb438f7c46fa7a537e8b929"
+    },
+    "miniprogram/data/cities.js": {
+      "component": "geonames",
+      "sha256": "ada47bf436147b0587d77fe3ba7ecda9943563b4058104657d57178515375b07"
+    },
+    "miniprogram/data/licenses.js": {
+      "component": "notices",
+      "sha256": "e99fbb476c43b001ae3d71d2e67c3754fd43480f319954359572a2ddc4b6b7bd"
+    },
+    "miniprogram/data/place-copy.js": {
+      "component": "application",
+      "sha256": "4445372e5cd8e9b01a52d77d4a876cb85f4f366fff7d6b293a3bde8f6e743d27"
+    },
+    "miniprogram/data/timezones.js": {
+      "component": "iana",
+      "sha256": "6192e25040b766925ff313af12ca4673de8aa5f382a8a6695c63beeda8a5cc92"
+    },
+    "miniprogram/data/world.js": {
+      "component": "natural-earth",
+      "sha256": "16f79b1cfe3e376649c30cc203e70f20806a848cad0152fcc091f74ab6220737"
+    },
+    "miniprogram/licenses/AGPL-3.0.txt": {
+      "component": "notices",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    "miniprogram/licenses/CC-BY-4.0.txt": {
+      "component": "notices",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    "miniprogram/licenses/Emscripten.txt": {
+      "component": "notices",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86"
+    },
+    "miniprogram/licenses/IANA.txt": {
+      "component": "notices",
+      "sha256": "0613408568889f5739e5ae252b722a2659c02002839ad970a63dc5e9174b27cf"
+    },
+    "miniprogram/licenses/Swiss-Ephemeris.txt": {
+      "component": "notices",
+      "sha256": "b6345743292c516d07799dfad46f1a641e5270da2160cc4d6bd54594d6faa991"
+    },
+    "miniprogram/licenses/compiler-rt.txt": {
+      "component": "notices",
+      "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+    },
+    "miniprogram/licenses/musl.txt": {
+      "component": "notices",
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+    },
+    "miniprogram/moondata/index.js": {
+      "component": "application",
+      "sha256": "17cb4fe57165b12e22d215e29e9c357afa7c8d76f029ccb669bec7191c8b5f56"
+    },
+    "miniprogram/moondata/index.json": {
+      "component": "application",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "miniprogram/moondata/index.wxml": {
+      "component": "application",
+      "sha256": "f057bee9a636d7882304113c994c5de837b8101147f585d31b08daa1013b2ff8"
+    },
+    "miniprogram/moondata/index.wxss": {
+      "component": "application",
+      "sha256": "759f24e1e4252b5a9b1089a0148dfc7fde9fe6afa69b7fcc5029bf3cfbf429cb"
+    },
+    "miniprogram/moondata/seas_18.bin": {
+      "component": "swiss-data",
+      "sha256": "a2cd8fc33807c78ca9a700c91c2e042258b12fc4796519e00781440b5ad8b2e2"
+    },
+    "miniprogram/moondata/semo_18.bin": {
+      "component": "swiss-data",
+      "sha256": "1ca07bd67c24374d77226180c20a4f9996cba013697894810518e7eb582ca4f7"
+    },
+    "miniprogram/moondata/sepl_18.bin": {
+      "component": "swiss-data",
+      "sha256": "ca1393ceab3a44fbc895887cf789c68819ae6a1cbc9b22225872dbe4ccd99a66"
+    },
+    "miniprogram/pages/index/index.js": {
+      "component": "application",
+      "sha256": "21a2e11927ba471034fba1b53fbba4af81f3fe0d96252b8d751e702de0ccd409"
+    },
+    "miniprogram/pages/index/index.json": {
+      "component": "application",
+      "sha256": "f1f86fee89d50665b0efec32b7da44cf7bdf4c835d5dbc6437b7f5d54a832fc0"
+    },
+    "miniprogram/pages/index/index.wxml": {
+      "component": "application",
+      "sha256": "beffb70876bc5c718e9d2239706acdb0f9c6ecc7fc603c9c0d9669ca07a11a0b"
+    },
+    "miniprogram/pages/index/index.wxss": {
+      "component": "application",
+      "sha256": "6f7fd730338fbb8482a5fcb6c17f9141d404edf1e63faf530bf608dea45c84f1"
+    },
+    "miniprogram/pages/licenses/index.js": {
+      "component": "notices",
+      "sha256": "d4e0e93e967435cf4f72eed89de5d2517e98971f0d39b4cb2b156f0614a22e43"
+    },
+    "miniprogram/pages/licenses/index.json": {
+      "component": "notices",
+      "sha256": "52d6a5e35be70a0732759f93c5ab4700cb6286e6d5586c513be4dded12f5eca5"
+    },
+    "miniprogram/pages/licenses/index.wxml": {
+      "component": "notices",
+      "sha256": "8d21260fdb4eff54b776b0075958631b027ceb888c9bb71bfcde444355c0877f"
+    },
+    "miniprogram/pages/licenses/index.wxss": {
+      "component": "notices",
+      "sha256": "3495cda9cd03f143ca38408cfbdc8376a6aacc79017c023ae3784cc34d22dac5"
+    },
+    "miniprogram/pages/privacy/index.js": {
+      "component": "application",
+      "sha256": "0895cb310fb18e3f6b35229e90218b9bd57abde1bb8820f33ff98f73fe83a0d5"
+    },
+    "miniprogram/pages/privacy/index.json": {
+      "component": "application",
+      "sha256": "79667872aa6415cc59d67bc74379ac7085af1494e8cb5e2a661a919ff72d79a2"
+    },
+    "miniprogram/pages/privacy/index.wxml": {
+      "component": "application",
+      "sha256": "02100bd3e6bc44d07f0945e11695358226cab1b9185d3ae64d38416b4d39fe2d"
+    },
+    "miniprogram/pages/privacy/index.wxss": {
+      "component": "application",
+      "sha256": "32e063988a30650ec0380622b5012f5d21bb34d85b9d3bc9babed445e12fb8f2"
+    },
+    "miniprogram/vendor/qy-swisseph.js": {
+      "component": "swiss-build",
+      "sha256": "0d34cf38a6e829bd1e12b480a0b3d6b8fbb2df21b704a6faac7c45ab28bf24a6"
+    },
+    "miniprogram/vendor/qy-swisseph.wasm": {
+      "component": "swiss-build",
+      "sha256": "9cd09926dcb808109ae12e5d3167417c65e3e366fe96349968884d8709f42a01"
+    }
+  }
+}

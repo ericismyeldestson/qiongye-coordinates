@@ -1,0 +1,86 @@
+<view class="page results">
+ <view wx:if="{{loading}}" class="loading"><view class="loading-mark">✦</view><view class="loading-title">正在计算你的星图</view><view class="notice">加载本地星历与 12 个天体…</view></view>
+ <view wx:elif="{{error}}" class="error-screen"><view class="eyebrow">穹野坐标</view><view class="error-title">暂时无法生成星图</view><view class="error">{{error}}</view><button class="primary" bindtap="retry">{{canRetry ? '重新计算' : (birth ? '修改出生资料' : '返回填写资料')}}</button><button wx:if="{{canRetry && birth}}" class="text-btn" bindtap="editBirth">修改出生资料</button></view>
+ <block wx:else>
+  <view class="result-heading">
+  <view class="row between"><text class="eyebrow">穹野坐标</text><text class="badge">✦ 计算完成</text></view>
+  <view class="result-name">{{birth.name || '我的星图'}}</view>
+  <view class="result-meta">{{birth.date}} · {{birth.time}}:{{birth.second}} · {{birth.city}}</view>
+  <view class="result-offset">{{birth.offset}} · {{birth.example ? '公开演示资料' : '当地钟表时间'}}</view>
+  </view>
+  <view class="notice sharing-disclosure"><view>分享会包含称呼、出生日期与时间、出生地点（含坐标）及当前结果。接收者可查看并再次转发。</view><navigator class="privacy-link" url="/pages/privacy/index">隐私与分享说明 ↗</navigator></view>
+  <view class="export-entry"><button class="pill" bindtap="openExport"><text>保存图片 · 分享</text><text class="export-entry-mark">↗</text></button></view>
+  <view class="tabs"><button class="tab {{tab==='places'?'selected':''}}" data-tab="places" bindtap="setTab">推荐地点</button><button class="tab {{tab==='map'?'selected':''}}" data-tab="map" bindtap="setTab">世界行星线</button><button class="tab {{tab==='chart'?'selected':''}}" data-tab="chart" bindtap="setTab">{{relocated ? '重定位星盘' : '本命星盘'}}</button></view>
+  <view wx:if="{{tab==='places'}}" class="places-panel">
+   <view class="row between places-heading"><text class="places-title">你的推荐地点</text><view class="row scope-controls"><button class="pill {{placeScope==='all'?'active':''}}" data-scope="all" bindtap="chooseScope">全部</button><button class="pill {{placeScope==='cn'?'active':''}}" data-scope="cn" bindtap="chooseScope">中国</button></view></view>
+   <view class="notice">从 {{candidateCount}} 个候选城市{{placeScope==='cn'?'（含港澳台）':''}}中，寻找与你的行星线相应的生活主题。点开地点，了解推荐原因。</view>
+   <view class="recommendation-grid">
+    <button wx:for="{{recommendations}}" wx:key="key" class="place-card {{item.key==='overall'?'featured':''}}" data-index="{{index}}" bindtap="chooseRecommendation" disabled="{{!item.city}}">
+     <view class="place-category"><text class="gold">{{item.symbol}}</text> {{item.label}}</view>
+     <block wx:if="{{item.city}}"><view class="place-name">{{item.city.name}}</view><view class="place-country">{{item.city.country}}</view><view class="place-score">{{item.key==='overall'?item.score+' 条附近线路':item.score+' 分 · 主题匹配'}}<text wx:if="{{item.tied>1}}"> · 同分首位</text></view><view class="place-open"><text>查看原因</text><text class="place-open-arrow">↗</text></view></block>
+     <view wx:else class="notice place-empty">该范围暂无符合此主题的城市</view>
+    </button>
+   </view>
+   <button class="text-btn method-toggle" bindtap="toggleMethod">{{methodExpanded?'收起':'了解'}}推荐规则 ⌄</button>
+   <view wx:if="{{methodExpanded}}" class="notice method-note"><view>在当前范围的 {{candidateCount}} 个候选城市中，统计城市附近约 350 公里内的行星线。</view><view>综合按线路数量排序；其他领域使用本程序的天体与轴线主题权重，同分时按 GeoNames 编号顺序展示。分数表示规则匹配程度，不是成功概率。</view><view>距离按线路采样点的球面距离估算；候选取 GeoNames 人口百万以上城市及各国家或地区人口前两位的收录城市，并包含香港、澳门和台北。这里的“最佳”是候选城市中的占星主题匹配，不包含房价、就业或签证条件；供自我探索参考。</view></view>
+  </view>
+  <view wx:else class="canvas-card">
+   <block wx:if="{{tab==='map'}}"><view class="row between canvas-heading"><text>{{lineCount}} 条行星线</text><button class="text-btn" bindtap="showLineHelp">如何查看 ↗</button></view><view class="map-stage"><canvas wx:if="{{!exportOpen}}" type="2d" id="world" class="astro-canvas map-canvas" bindtouchstart="touchStart" catchtouchmove="touchMove" bindtouchend="touchEnd"/></view><view class="row between map-tools"><text class="small muted">拖动 · 缩放 · 轻点选址</text><view class="row map-controls"><button class="zoom" data-factor="0.6666666666666666" bindtap="zoom">−</button><button class="zoom" bindtap="reset">◎</button><button class="zoom" data-factor="1.5" bindtap="zoom">＋</button></view></view></block>
+   <block wx:else><view class="canvas-heading row between"><text>{{locationName}}</text><text class="small gold">{{birth.system==='P'?'Placidus':'整宫制'}}</text></view><view class="wheel-stage"><canvas wx:if="{{!exportOpen}}" type="2d" id="wheel" class="astro-canvas wheel-canvas"/></view><view class="notice canvas-note">{{result.houseError || (relocated ? '使用同一出生时刻，按所选地点重算宫位。' : '引线起点为实际黄经，标签为避免拥挤可能错开。')}}</view></block>
+  </view>
+  <block wx:if="{{tab==='map'}}">
+   <scroll-view scroll-x class="filter-scroll"><view class="filter-row"><button class="pill {{planet==='all'?'active':''}}" data-key="all" bindtap="choosePlanet">全部天体</button><button wx:for="{{planets}}" wx:key="key" class="pill {{planet===item.key?'active':''}}" data-key="{{item.key}}" bindtap="choosePlanet"><text style="color:{{item.color}};margin-right:8rpx">{{item.symbol}}</text>{{item.name}}</button></view></scroll-view>
+   <view class="angle-filters"><button wx:for="{{angles}}" wx:key="*this" class="pill {{angle===item?'active':''}}" data-key="{{item}}" bindtap="chooseAngle">{{item==='all'?'全部轴线':item}}</button></view>
+  </block>
+  <view id="city-analysis" class="card relocation"><view class="row between relocation-heading"><text class="relocation-title">探索一座城市</text><button wx:if="{{relocated}}" class="text-btn" bindtap="resetBirth">还原出生地</button></view><view class="field city-search"><input placeholder="搜索城市，如：巴黎、东京、纽约" placeholder-style="color:#a4b3c8" value="{{relocationQuery}}" bindinput="onCity"/></view><scroll-view wx:if="{{cityOptions.length}}" class="choice-list" scroll-y><view class="choice" wx:for="{{cityOptions}}" wx:key="id" data-index="{{index}}" bindtap="selectCity"><view>{{item.name}} · {{item.country}}</view><view class="small muted">{{item.english}}</view></view></scroll-view><view wx:if="{{relocationQuery && !cityOptions.length && relocationQuery!==locationName}}" class="notice">没有匹配的城市，可在世界行星线地图上轻点选址。</view><view class="small muted">当前：{{locationName}} {{relocated ? coordinateText : ''}}</view><view wx:if="{{!analysis}}" class="notice">点开上方推荐，或搜索城市，查看附近线路及当地主题。</view>
+   <view wx:if="{{analysis}}" class="place-analysis">
+    <view class="analysis-title">{{analysis.name}} · {{analysis.label==='综合最佳'?'综合主题':analysis.label}}</view>
+    <view class="notice">附近 {{analysis.nearbyCount}} 条线路 · {{analysis.contributingCount}} 条计入本领域 · {{analysis.score}} 分</view>
+    <view class="goal-grid"><button wx:for="{{analysis.scores}}" wx:key="key" class="goal-chip {{placeGoal===item.key?'active':''}}" data-goal="{{item.key}}" bindtap="chooseGoal">{{item.label}} <text>{{item.score}}</text></button></view>
+    <view wx:if="{{!analysis.nearbyCount}}" class="empty-place">约 350 公里内没有匹配的行星线。这表示当前规则没有明显主题信号，不等于这个地点不适合你。</view>
+    <view wx:elif="{{!analysis.contributingCount}}" class="empty-place">附近有线路，但没有线路计入“{{analysis.label}}”。可以切换其他主题，或查看下方线路含义。</view>
+    <view class="line-reason" wx:for="{{analysis.rows}}" wx:key="key">
+     <view class="reason-heading"><text style="color:{{item.color}}">{{item.symbol}} {{item.planetName}} · {{item.angle}} {{item.axisName}}</text><text class="reason-points">{{item.points?'+'+item.points+' 分':'本领域不计分'}}</text></view>
+     <view class="small muted">{{item.distanceText}} · {{item.points?'计入'+analysis.label:'附近的其他主题'}}</view>
+     <view class="reason-meaning">{{item.meaning}}</view>
+     <button class="text-btn" data-index="{{index}}" bindtap="showPlaceLine">在地图上查看这条线 ↗</button>
+    </view>
+    <view class="place-actions"><button class="secondary" data-tab="map" bindtap="viewPlace">查看地点地图</button><button class="secondary" data-tab="chart" bindtap="viewPlace">{{relocated?'查看重定位星盘':'查看本命星盘'}}</button></view>
+    <button wx:if="{{tab!=='places'}}" class="text-btn" data-tab="places" bindtap="viewPlace">返回推荐地点 ↑</button>
+   </view>
+  </view>
+  <view wx:if="{{tab!=='places' && result.houses}}" class="axes"><view wx:for="{{result.axes}}" wx:key="name"><view class="label">{{item.name}}</view><view class="axis-value">{{item.position}}</view></view></view>
+  <view wx:if="{{tab!=='places'}}" class="card data-card">
+   <view class="table-tabs"><button class="text-btn {{activeTable==='planets'?'on':''}}" data-tab="planets" bindtap="setTable">天体</button><button class="text-btn {{activeTable==='houses'?'on':''}}" data-tab="houses" bindtap="setTable">宫位</button><button class="text-btn {{activeTable==='aspects'?'on':''}}" data-tab="aspects" bindtap="setTable">相位</button></view>
+   <block wx:if="{{activeTable==='planets'}}"><view class="data-row table-head"><text>天体</text><text>黄道位置</text><text>宫</text></view><view class="data-row" wx:for="{{result.bodies}}" wx:key="key"><text style="color:{{item.color}}">{{item.symbol}} {{item.name}} <text class="retro">{{item.retrograde?'R':''}}</text></text><text>{{item.position}}</text><text class="muted">{{item.house}}</text></view></block>
+   <block wx:elif="{{activeTable==='houses'}}"><view wx:if="{{result.houseError}}" class="notice">{{result.houseError}}</view><view class="data-row houses-row" wx:for="{{result.houseRows}}" wx:key="number"><text class="muted">第 {{item.number}} 宫</text><text>{{item.position}}</text></view></block>
+   <block wx:else><view class="notice" style="margin:8rpx 0 22rpx">容许度：合 / 冲 8°，刑 / 拱 6°，六合 4°。</view><view class="aspect-row" wx:for="{{result.aspects}}" wx:key="index"><text>{{item.label}}</text><text class="gold">{{item.name}}</text><text class="muted">{{item.orbText}}</text></view></block>
+  </view>
+  <button class="text-btn details-toggle" bindtap="toggleDetails">{{expanded?'收起':'查看'}}计算来源与时间明细 ⌄</button>
+  <view wx:if="{{expanded}}" class="card notice calculation-details"><view>{{result.engine}}</view><view>UTC：{{result.utc}}</view><view>儒略日：{{result.jd}}</view><view>出生地时区：{{birth.timezone}}</view><view>热带黄道 · 地心位置 · 公历</view><view>行星线使用本程序独立实现的球面几何计算；星历来自官方 Swiss Ephemeris。</view><block wx:if="{{birth.example && birth.source}}"><view>名人示例来源：{{birth.source.title}}</view><view>{{birth.source.summary}}</view><view>{{birth.source.note}}</view><text user-select="{{true}}">{{birth.source.url}}</text></block><view>城市坐标为中心点；世界地图为离线陆地概览。</view><view>出生资料在设备内计算，小程序不主动保存。主动保存、复制或分享会产生副本；关闭小程序不会删除或撤回这些副本。</view><button class="secondary" style="margin-top:20rpx" bindtap="exportResult">复制完整计算结果 JSON</button></view>
+  <view class="footer">穹野坐标 · 占星内容仅供兴趣参考<view>星图由本机星历计算</view><view>地图：Natural Earth · 城市：GeoNames</view></view>
+ </block>
+ <block wx:if="{{exportOpen}}">
+  <canvas type="2d" id="export-canvas" class="export-canvas" style="height:{{exportHeight}}px"/>
+  <view class="export-mask" bindtap="closeExport" catchtouchmove="holdExport">
+   <view class="export-sheet" catchtap="holdExport">
+    <view class="sheet-handle" aria-hidden="true"></view>
+    <view class="row between export-header"><view><view class="export-title">保存与分享</view><view class="notice">{{exportLabel}} · 当前结果</view></view><button class="text-btn" bindtap="closeExport">关闭 ✕</button></view>
+    <scroll-view class="poster-preview" scroll-y>
+     <image wx:if="{{posterPath}}" src="{{posterPath}}" mode="widthFix" class="poster-image" bindtap="previewPoster"/>
+     <view wx:else class="poster-placeholder">{{exportBusy?'正在生成清晰结果图…':'图片暂未生成'}}</view>
+    </scroll-view>
+    <view class="notice export-note">图片和分享页面包含出生资料，接收者可查看和转发。关闭小程序不会收回已保存或分享的副本。点图片可放大预览。</view>
+    <view wx:if="{{exportError}}" class="export-error">{{exportError}}</view>
+    <button wx:if="{{albumDenied && canOpenSettings}}" class="text-btn" bindtap="openAlbumSettings" disabled="{{shareBusy}}">打开相册权限设置 ↗</button>
+    <button wx:if="{{!posterPath && !exportBusy}}" class="secondary" bindtap="openExport">重新生成图片</button>
+    <view wx:if="{{!canShareFriend || !canOpenSettings}}" class="notice export-note">当前为微信预览页面，部分操作需要通过微信提供的入口打开完整小程序后继续。</view>
+    <view class="export-actions">
+     <button class="secondary" bindtap="savePoster" disabled="{{exportBusy || shareBusy || !posterPath}}"><text class="share-icon" aria-hidden="true">↓</text>保存图片</button>
+     <button class="secondary" bindtap="shareTimelineImage" disabled="{{exportBusy || shareBusy || !posterPath}}"><text class="share-icon" aria-hidden="true">◎</text>朋友圈</button>
+     <button wx:if="{{canShareFriend}}" class="primary" open-type="share" disabled="{{exportBusy || shareBusy || shareInvalid || !posterPath}}"><text class="share-icon" aria-hidden="true">↗</text>发给好友</button><button wx:else class="secondary" bindtap="capabilityHelp"><text class="share-icon" aria-hidden="true">↗</text>如何发给好友</button>
+    </view>
+   </view>
+  </view>
+ </block>
+</view>

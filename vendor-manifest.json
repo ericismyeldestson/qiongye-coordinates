@@ -1,0 +1,61 @@
+{
+  "upstream": "https://github.com/aloistr/swisseph",
+  "revision": "91339e55d2351f32548d8a8d5bca6aa93b4f6da7",
+  "licenseSelection": "AGPL-3.0-only",
+  "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.15 (09f52557f0d48b65b8c724853ed8f4e8bf80e669)",
+  "command": [
+    "emcc",
+    "third_party/swisseph/swedate.c",
+    "third_party/swisseph/swehouse.c",
+    "third_party/swisseph/swejpl.c",
+    "third_party/swisseph/swemmoon.c",
+    "third_party/swisseph/swemplan.c",
+    "third_party/swisseph/sweph.c",
+    "third_party/swisseph/swephlib.c",
+    "native/swiss-wrapper.c",
+    "-Ithird_party/swisseph",
+    "-O2",
+    "--no-entry",
+    "-sMODULARIZE=1",
+    "-sEXPORT_NAME=QiongyeSwiss",
+    "-sENVIRONMENT=web,worker",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sFILESYSTEM=1",
+    "-sFORCE_FILESYSTEM=1",
+    "-sASSERTIONS=0",
+    "-sEXPORTED_FUNCTIONS=[\"_malloc\",\"_free\",\"_swe_version_wrap\",\"_swe_set_ephe_path_wrap\",\"_swe_calc_ut_wrap\",\"_swe_houses_wrap\",\"_qy_sidereal\",\"_qy_obliquity\"]",
+    "-sEXPORTED_RUNTIME_METHODS=[\"ccall\",\"getValue\",\"UTF8ToString\",\"FS\"]",
+    "-sINCOMING_MODULE_JS_API=[\"instantiateWasm\",\"locateFile\",\"print\",\"printErr\"]",
+    "-o",
+    "miniprogram/vendor/qy-swisseph.js"
+  ],
+  "adapter": "native/swiss-wrapper.c",
+  "adapterSha256": "df15149da8c8628cec6803e1f875c64177bacd7f2766426ef96bedf2400a3e63",
+  "outputs": [
+    {
+      "file": "miniprogram/vendor/qy-swisseph.js",
+      "bytes": 60031,
+      "sha256": "0d34cf38a6e829bd1e12b480a0b3d6b8fbb2df21b704a6faac7c45ab28bf24a6"
+    },
+    {
+      "file": "miniprogram/vendor/qy-swisseph.wasm",
+      "bytes": 382424,
+      "sha256": "9cd09926dcb808109ae12e5d3167417c65e3e366fe96349968884d8709f42a01"
+    },
+    {
+      "file": "miniprogram/moondata/sepl_18.bin",
+      "bytes": 484061,
+      "sha256": "ca1393ceab3a44fbc895887cf789c68819ae6a1cbc9b22225872dbe4ccd99a66"
+    },
+    {
+      "file": "miniprogram/moondata/semo_18.bin",
+      "bytes": 1304771,
+      "sha256": "1ca07bd67c24374d77226180c20a4f9996cba013697894810518e7eb582ca4f7"
+    },
+    {
+      "file": "miniprogram/moondata/seas_18.bin",
+      "bytes": 223004,
+      "sha256": "a2cd8fc33807c78ca9a700c91c2e042258b12fc4796519e00781440b5ad8b2e2"
+    }
+  ]
+}

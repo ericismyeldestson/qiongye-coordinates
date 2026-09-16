@@ -1,0 +1,5 @@
+.privacy-title { font-size: 44rpx; font-weight: 600; margin: 22rpx 0 16rpx; }
+.privacy-page .card { font-size: 30rpx; line-height: 1.85; }
+.privacy-page .card-title { margin-bottom: 18rpx; }
+.privacy-paragraph { margin-top: 20rpx; }
+@media (max-width: 350px) { .privacy-page .card { font-size: 15px; } }

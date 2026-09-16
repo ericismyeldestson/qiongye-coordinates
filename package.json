@@ -1,0 +1,19 @@
+{
+  "name": "starmapper-miniprogram",
+  "version": "0.4.0",
+  "private": true,
+  "scripts": {
+    "vendor": "node scripts/prepare-vendor.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "check": "node scripts/check.cjs",
+    "places": "node scripts/prepare-recommendations.cjs",
+    "build:swiss": "node scripts/build-swiss.cjs",
+    "fixtures": "python3 scripts/reference-fixtures.py",
+    "audit:licenses": "node scripts/audit-licenses.cjs",
+    "audit:seal": "node scripts/audit-licenses.cjs --seal",
+    "check:release": "node scripts/audit-licenses.cjs --release",
+    "source:pack": "node scripts/package-source.cjs",
+    "source:release": "node scripts/package-source.cjs --release"
+  },
+  "license": "AGPL-3.0-only"
+}

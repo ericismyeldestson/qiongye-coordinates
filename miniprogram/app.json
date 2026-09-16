@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/privacy/index",
+    "pages/licenses/index"
+  ],
+  "subpackages": [
+    {
+      "name": "moondata",
+      "root": "moondata",
+      "pages": [
+        "index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "穹野坐标",
+    "navigationBarBackgroundColor": "#111b2c",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#111b2c"
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,42 @@
+<view class="page birth-page">
+ <view class="birth-hero">
+ <view class="row between"><text class="eyebrow">穹野坐标</text><text class="badge">✦ 本地星历计算</text></view>
+ <view class="hero-heading"><view class="hero-title">你的星盘，<view class="gold">在世界的坐标。</view></view><hero-globe class="hero-planet" aria-hidden="true"></hero-globe></view>
+ <view class="hero-desc">从出生的那一刻出发，探索占星星盘、世界行星线与城市主题。</view>
+ </view>
+ <view class="card birth-card">
+  <view class="row between section-heading"><text class="card-title">出生资料</text><text class="step-label">01 / 生成星图</text></view>
+  <view class="label">试用公开演示</view>
+  <view class="example-grid"><button wx:for="{{examples}}" wx:key="label" class="pill {{example && form.name===item.name ? 'active' : ''}}" data-index="{{index}}" bindtap="example">{{item.label}}</button></view>
+  <view wx:if="{{example}}" class="notice example-note">当前为公开示例，可直接生成。填写自己的资料请使用下方入口。</view>
+  <view wx:elif="{{exampleEdited}}" class="notice example-note">基于公开示例修改，请核对出生日期、时间与地点。其余字段可能仍沿用示例。</view>
+  <button wx:if="{{exampleOrigin}}" class="secondary personal-entry" bindtap="startPersonal" disabled="{{submitting}}">填写我的资料</button>
+  <view wx:else class="notice personal-note">正在填写个人资料，请选择出生日期、当地时间与出生城市。</view>
+  <view wx:if="{{example && form.source}}" class="notice source-note"><view>{{form.source.summary}}</view><button class="text-btn" bindtap="showExampleSource">查看出生资料来源 ↗</button></view>
+  <view class="field"><text class="label">称呼（可选）</text><input value="{{form.name}}" data-field="name" bindinput="onInput" placeholder="为这张星图起一个名字" placeholder-style="color:#a4b3c8" maxlength="40"/></view>
+  <view class="grid2"><view class="field"><text class="label">出生日期</text><picker mode="date" value="{{form.date}}" start="1900-01-01" end="2099-12-31" bindchange="onDate"><view>{{form.date || '请选择日期'}} <text class="muted">⌄</text></view></picker></view><view class="field"><text class="label">当地钟表时间</text><picker mode="time" value="{{form.time}}" bindchange="onTime"><view>{{form.time || '请选择时间'}} <text class="muted">⌄</text></view></picker></view></view>
+  <view class="field"><text class="label">出生城市 · 中文 / English</text><input value="{{form.city}}" maxlength="100" bindinput="onCity" placeholder="搜索城市" placeholder-style="color:#a4b3c8"/></view>
+  <scroll-view wx:if="{{cityOptions.length}}" class="choice-list" scroll-y><view wx:for="{{cityOptions}}" wx:key="id" class="choice" data-index="{{index}}" bindtap="selectCity"><view>{{item.name}} <text class="small muted">{{item.country}}</text></view><view class="small muted">{{item.english}} · {{item.timezone}}</view></view></scroll-view>
+  <view wx:if="{{!citySelected && !manualConfirmed}}" class="notice location-feedback"><view class="gold">地点待确认</view><view>{{locationHint}}</view></view>
+  <view wx:elif="{{form.timezone}}" class="muted location-meta"><view>{{manualConfirmed ? '已采用手动地点' : '已选择出生城市'}}</view>{{form.timezone}} · {{form.latitude}}°, {{form.longitude}}°</view>
+  <button class="text-btn advanced-toggle" bindtap="toggleAdvanced"><text>{{advanced ? '收起' : '调整'}}坐标、时区与宫制</text><text>{{advanced ? '⌃' : '⌄'}}</text></button>
+  <view wx:if="{{advanced}}" class="advanced-fields">
+   <view class="grid2"><view class="field"><text class="label">纬度 · 北正南负</text><input value="{{form.latitude}}" data-field="latitude" bindinput="onInput"/></view><view class="field"><text class="label">经度 · 东正西负</text><input value="{{form.longitude}}" data-field="longitude" bindinput="onInput"/></view></view>
+   <view class="field"><text class="label">原始记录采用的时区</text><picker range="{{zoneNames}}" value="{{zoneIndex}}" bindchange="onZone"><view>{{form.timezone || '请选择时区'}} ⌄</view></picker></view>
+   <view class="notice" style="margin-bottom:18rpx">若记录采用北京时间，选择 Asia/Shanghai；新疆时间选择 Asia/Urumqi。系统按日期处理历史时差与夏令时。</view>
+   <view class="grid2"><view class="field"><text class="label">宫制</text><picker range="{{systems}}" value="{{systemIndex}}" bindchange="onSystem"><view>{{systems[systemIndex]}} ⌄</view></picker></view><view class="field"><text class="label">出生时间 · 秒</text><input type="number" maxlength="2" value="{{form.second}}" data-field="second" bindinput="onInput"/></view></view>
+   <view wx:if="{{!citySelected}}" class="notice manual-location"><view class="gold">{{manualConfirmed ? '已采用手动地点' : '手动地点草稿 · 待确认'}}</view><view>{{form.city || '请填写地点名称'}} · {{form.latitude}}°, {{form.longitude}}° · {{form.timezone || '请选择时区'}}</view><view>请核对坐标与记录采用的时区。</view><button class="secondary" bindtap="confirmManualLocation" disabled="{{manualConfirmed}}">{{manualConfirmed?'已采用以上坐标与时区':'采用以上坐标与时区'}}</button></view>
+  </view>
+  <view wx:if="{{exampleEdited}}" class="notice example-confirmation">
+   <view class="gold">核对基于示例修改的出生资料</view>
+   <view>{{form.date}} · {{form.time}}:{{form.second || '00'}}</view>
+   <block wx:if="{{citySelected || manualConfirmed}}"><view>{{form.city}} · {{form.timezone}}</view><view>{{form.latitude}}°, {{form.longitude}}°</view></block>
+   <view wx:else>地点待确认，请先选择出生城市或采用手动地点。</view>
+   <button class="secondary" bindtap="confirmExampleBirth" disabled="{{exampleConfirmed}}">{{exampleConfirmed ? '出生资料已核对' : '以上出生资料已核对'}}</button>
+  </view>
+  <view wx:if="{{error}}" class="error">{{error}}</view>
+  <button class="primary generate-button" bindtap="calculate" loading="{{submitting}}" disabled="{{submitting}}">生成我的星图 <text>↗</text></button>
+ </view>
+ <view class="birth-features"><text class="small muted">12 个天体</text><text class="gold">·</text><text class="small muted">48 条行星线</text><text class="gold">·</text><text class="small muted">地点推荐与重定位</text></view>
+ <view class="footer birth-footer">占星内容仅供兴趣参考<view>出生资料在设备内计算，小程序不主动保存</view><view>主动保存、复制或分享会产生资料副本</view><navigator class="privacy-link" url="/pages/privacy/index">隐私与分享说明 ↗</navigator><navigator class="privacy-link" url="/pages/licenses/index">许可与源码 ↗</navigator><view>离线城市 {{cityCount}} 个 · 日期范围 1900—2099</view></view>
+</view>

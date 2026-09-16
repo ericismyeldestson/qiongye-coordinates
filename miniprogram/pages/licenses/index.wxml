@@ -1,0 +1,5 @@
+<view class="page">
+ <view class="eyebrow">穹野坐标 · {{version}}</view><view class="section-title">许可与源码</view>
+ <view class="card"><view class="card-title">开放源码</view><view class="notice">本程序采用 AGPL v3。第三方数据和运行支持分别遵循下列许可。</view><button class="secondary" bindtap="copySource" disabled="{{!sourceURL}}">{{sourceURL?'复制完整源码地址':'开发版本 · 源码地址待发布'}}</button></view>
+ <view class="card" wx:for="{{licenses}}" wx:key="id"><view class="card-title">{{item.title}}</view><view class="license-summary">{{item.summary}}</view><button class="text-btn" data-id="{{item.id}}" bindtap="toggle">{{expanded===item.id?'收起许可原文':'查看许可原文'}}</button><text wx:if="{{expanded===item.id}}" class="license-text" selectable>{{item.text}}</text></view>
+</view>

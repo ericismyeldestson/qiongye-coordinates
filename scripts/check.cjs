@@ -1,0 +1,6 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),mp=path.join(root,'miniprogram');let main=0,sub=0,js=0,files=0;
+function walk(dir){for(const f of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,f.name);if(f.isDirectory())walk(p);else{files++;const n=fs.statSync(p).size;if(p.includes('/moondata/'))sub+=n;else main+=n;if(p.endsWith('.js')){cp.execFileSync(process.execPath,['--check',p]);js++;}if(p.endsWith('.json'))JSON.parse(fs.readFileSync(p,'utf8'));}}}walk(mp);
+assert(main<2*1024*1024,'main package exceeds 2 MiB');assert(sub<2*1024*1024,'ephemeris package exceeds 2 MiB');
+const app=JSON.parse(fs.readFileSync(path.join(mp,'app.json')));for(const p of [...app.pages,...app.subpackages.flatMap(s=>s.pages.map(p=>s.root+'/'+p))])for(const ext of ['.js','.json','.wxml'])assert(fs.existsSync(path.join(mp,p+ext)),p+ext);
+const report={mainBytes:main,ephemerisPackageBytes:sub,totalBytes:main+sub,files,syntaxChecked:js};fs.mkdirSync(path.join(root,'verification'),{recursive:true});fs.writeFileSync(path.join(root,'verification/package-check.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

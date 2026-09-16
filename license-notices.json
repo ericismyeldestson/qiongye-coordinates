@@ -1,0 +1,50 @@
+[
+  {
+    "id": "project",
+    "title": "穹野坐标 · AGPL v3",
+    "summary": "本程序代码按 GNU Affero General Public License 第 3 版提供。你可以依照许可使用、修改和再分发；修改后的分发和网络服务也需履行对应源码义务。",
+    "file": "AGPL-3.0.txt"
+  },
+  {
+    "id": "swiss",
+    "title": "Swiss Ephemeris",
+    "summary": "Copyright © Astrodienst AG；本项目选择 AGPL 路径，官方源码及星历数据来源在源码包中记录。本项目由独立开发者维护，不代表该机构背书。",
+    "file": "Swiss-Ephemeris.txt"
+  },
+  {
+    "id": "geonames",
+    "title": "GeoNames · CC BY 4.0",
+    "summary": "城市名称、坐标及候选城市来自 GeoNames。已筛选、添加中文常用名并转换格式。来源：https://www.geonames.org/；许可：https://creativecommons.org/licenses/by/4.0/",
+    "file": "CC-BY-4.0.txt"
+  },
+  {
+    "id": "earth",
+    "title": "Natural Earth · 公共领域",
+    "summary": "世界陆地轮廓来自 Natural Earth；轮廓经简化，首页地球纹理由本程序绘制，亮点仅作装饰。来源：https://www.naturalearthdata.com/",
+    "text": "Terms: https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  {
+    "id": "iana",
+    "title": "IANA 时区数据",
+    "summary": "历史民用时区转换来自 IANA 时区数据，经本程序预计算。来源：https://www.iana.org/time-zones",
+    "file": "IANA.txt"
+  },
+  {
+    "id": "emscripten",
+    "title": "Emscripten 运行支持",
+    "summary": "官方 Swiss C 源码通过 Emscripten 4.0.15 编译为本地运行模块。运行支持保留原有许可。",
+    "file": "Emscripten.txt"
+  },
+  {
+    "id": "compiler-rt",
+    "title": "LLVM compiler-rt",
+    "summary": "编译器运行支持。",
+    "file": "compiler-rt.txt"
+  },
+  {
+    "id": "musl",
+    "title": "musl C 运行支持",
+    "summary": "WASM 静态链接的 C 运行支持，保留原始许可声明。",
+    "file": "musl.txt"
+  }
+]
