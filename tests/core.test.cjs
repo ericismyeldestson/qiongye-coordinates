@@ -35,7 +35,7 @@ test('dateline splits cannot draw a line across the globe',()=>{const parts=spli
 test('rounding does not emit 30 degrees inside previous sign',()=>assert.equal(angleText(29.9999999),'金牛 00°00′00″'));
 test('house assignment wraps Aries boundary',()=>assert.equal(houseOf(5,[350,20,50,80,110,140,170,200,230,260,290,320]),1));
 
-test('independent recommendations use licensed coordinates and consistent scores',()=>{
+test('reference recommendations keep card and analysis scores consistent',()=>{
  const raw=engine.calculate(dates[4],31.2304,121.4737),evaluator=createEvaluator(raw.lines);
  for(const scope of ['all','cn']){
   const r=evaluator.recommendations(scope);
@@ -47,11 +47,17 @@ test('independent recommendations use licensed coordinates and consistent scores
  }
  const previous=JSON.stringify(evaluator.recommendations());evaluator.analyse(search('巴黎')[0],'love');assert.equal(JSON.stringify(evaluator.recommendations()),previous);
 });
-test('China scope includes CN, HK, MO and TW and every candidate resolves to source coordinates',()=>{
- const rows=require('../miniprogram/data/cities');
+test('reference city scope preserves its coordinates and resolves GeoNames display metadata',()=>{
+ const reference=require('../third_party/recommendation-reference/candidates.json').cities;
+ const rows=JSON.parse(require('node:zlib').gunzipSync(fs.readFileSync(path.join(__dirname,'../third_party/geonames/cities.json.gz')))).cities;
  for(const code of ['CN','HK','MO','TW'])assert.ok(CANDIDATES.some(c=>c.country===code));
- for(const c of CANDIDATES){const r=rows.find(r=>r[0]===c.id);assert.ok(r);assert.equal(c.lat,r[4]);assert.equal(c.lon,r[5]);}
+ assert.equal(CANDIDATES.length,415);
+ for(const [i,c] of CANDIDATES.entries()){
+  const r=rows.find(r=>r[0]===c.id);assert.ok(r);assert.equal(c.displayName,r[3]||c.name);
+  assert.equal(c.name,reference[i].name);assert.equal(c.lat,reference[i].lat);assert.equal(c.lon,reference[i].lon);
+ }
  const cn=createEvaluator([]).recommendations('cn');assert.ok(cn.cards.every(c=>c.city===null));
+ assert.equal(cn.candidateCount,9);
 });
 test('all 48 independently authored interpretations are available',()=>{
  const lines=require('../miniprogram/core/engine').BODIES.flatMap(b=>['ASC','MC','DSC','IC'].map(angle=>({planet:b.key,angle,points:[{lat:0,lon:0}]})));

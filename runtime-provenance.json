@@ -1,11 +1,11 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "reviewedAt": "2026-09-16",
   "scope": "Every file inside miniprogram; new files require explicit origin review. Hashes detect changes but do not grant rights.",
   "components": {
     "application": {
       "license": "AGPL-3.0-only",
-      "origin": "Locally developed native Mini Program, independently authored geometry, recommendation rules, Chinese interpretations, rendering and export.",
+      "origin": "Locally developed native Mini Program; original numeric recommendation semantics independently implemented, Chinese interpretations and rendering independently authored.",
       "notice": "LICENSE"
     },
     "swiss-build": {
@@ -47,6 +47,18 @@
       "license": "AGPL-3.0-only for program code; factual metadata individually attributed",
       "origin": "Original app logic, concise Bruce Lee/Yao Ming birth facts with source/rating; no images or biographies.",
       "notice": "THIRD-PARTY-NOTICES.md"
+    },
+    "astronomy-engine": {
+      "license": "MIT",
+      "origin": "Official astronomy-engine 2.1.19 package; unchanged time/orientation functions selected reproducibly.",
+      "notice": "miniprogram/licenses/Astronomy-Engine.txt",
+      "manifest": "third_party/astronomy-engine/provenance.json"
+    },
+    "recommendation-reference": {
+      "license": "NOASSERTION for reference compilation; CC-BY-4.0 for GeoNames display metadata",
+      "origin": "Original scope/order/reference coordinates retained for local compatibility; separate GeoNames display names. Redistribution not cleared.",
+      "notice": "THIRD-PARTY-NOTICES.md",
+      "manifest": "recommendations-manifest.json"
     }
   },
   "files": {
@@ -104,7 +116,7 @@
     },
     "miniprogram/core/engine.js": {
       "component": "application",
-      "sha256": "7b05ad5fc2532fa932eff6c2c7a2f13b36240cb477dc5048c72910ba0d37c33c"
+      "sha256": "f4df67498e39832a75cd2c672b0d0ddc81dcfc096cb50c4f44b4af2c192bff7f"
     },
     "miniprogram/core/export.js": {
       "component": "application",
@@ -116,11 +128,11 @@
     },
     "miniprogram/core/place-rules.js": {
       "component": "application",
-      "sha256": "6e94f67ec385adac507d413289a666efad7c870e97c77dd3e1d1641ed5060486"
+      "sha256": "ccf35cbe75bd22f8381794ee5d1b930edfbecb9103318513bc7c25a75b8c763a"
     },
     "miniprogram/core/poster.js": {
       "component": "application",
-      "sha256": "6eeb9aee7466c96d2932cb0cc233e10a4fb7a6f62658615db8ae96c379234b51"
+      "sha256": "aad6a03246efdc30a684cd2319b150e487e834878afad568aa857d39d21c1e93"
     },
     "miniprogram/core/recommendations.js": {
       "component": "application",
@@ -136,15 +148,15 @@
     },
     "miniprogram/core/sky-lines.js": {
       "component": "application",
-      "sha256": "ba08fca7641f3f5b433130e3f9aed0e6a1548680c3f3ee8f0a20f2c3773db915"
+      "sha256": "b962e2d0571f71587234f083a8d18a6c6fdd8a905fa62ab2c03f447a09ee81f7"
     },
     "miniprogram/core/time.js": {
       "component": "application",
       "sha256": "95f90492d457108891a09d288f792fbd52efaa1af6a96cd23567db11fb5f4674"
     },
     "miniprogram/data/candidates.js": {
-      "component": "geonames",
-      "sha256": "c0569dc7118bc795ed91247688739071545361589fb438f7c46fa7a537e8b929"
+      "component": "recommendation-reference",
+      "sha256": "eed5d70f7a209af71cd8333220fb686213f20622d8c42b348292a453a60fdbf7"
     },
     "miniprogram/data/cities.js": {
       "component": "geonames",
@@ -152,7 +164,7 @@
     },
     "miniprogram/data/licenses.js": {
       "component": "notices",
-      "sha256": "e99fbb476c43b001ae3d71d2e67c3754fd43480f319954359572a2ddc4b6b7bd"
+      "sha256": "9fa65fa0dafe8b86a71c6af005fb33d7d99eaca818494315231cf0787d8de690"
     },
     "miniprogram/data/place-copy.js": {
       "component": "application",
@@ -204,7 +216,7 @@
     },
     "miniprogram/moondata/index.wxml": {
       "component": "application",
-      "sha256": "f057bee9a636d7882304113c994c5de837b8101147f585d31b08daa1013b2ff8"
+      "sha256": "c9e425ac4c0c7c86b8c9b23669232c8aafa7353b52432c015a41f9d36a3c9358"
     },
     "miniprogram/moondata/index.wxss": {
       "component": "application",
@@ -277,6 +289,14 @@
     "miniprogram/vendor/qy-swisseph.wasm": {
       "component": "swiss-build",
       "sha256": "9cd09926dcb808109ae12e5d3167417c65e3e366fe96349968884d8709f42a01"
+    },
+    "miniprogram/vendor/astronomy-time.js": {
+      "component": "astronomy-engine",
+      "sha256": "f1eb96c95754a41ab90feba4620d57e4cbfdfd486f60e8a47b4343a457613b55"
+    },
+    "miniprogram/licenses/Astronomy-Engine.txt": {
+      "component": "notices",
+      "sha256": "31e913dcab32e6e5d0aa1b5f32ab350a6ab91b273f7f38d4de83b54ee644de41"
     }
   }
 }

@@ -12,9 +12,15 @@
     "file": "Swiss-Ephemeris.txt"
   },
   {
+    "id": "astronomy-engine",
+    "title": "Astronomy Engine · MIT",
+    "summary": "恒星时、黄赤交角与时间换算使用官方 Astronomy Engine 2.1.19 的函数子集。保留 Don Cross 的 MIT 许可与原始函数，天体星历仍使用 Swiss Ephemeris。",
+    "file": "Astronomy-Engine.txt"
+  },
+  {
     "id": "geonames",
     "title": "GeoNames · CC BY 4.0",
-    "summary": "城市名称、坐标及候选城市来自 GeoNames。已筛选、添加中文常用名并转换格式。来源：https://www.geonames.org/；许可：https://creativecommons.org/licenses/by/4.0/",
+    "summary": "离线地点搜索及推荐城市显示名称使用 GeoNames 数据，已筛选并转换格式。推荐名单、顺序和参考坐标另外记录来源。来源：https://www.geonames.org/；许可：https://creativecommons.org/licenses/by/4.0/",
     "file": "CC-BY-4.0.txt"
   },
   {
@@ -46,5 +52,11 @@
     "title": "musl C 运行支持",
     "summary": "WASM 静态链接的 C 运行支持，保留原始许可声明。",
     "file": "musl.txt"
+  },
+  {
+    "id": "recommendation-reference",
+    "title": "推荐候选参考数据",
+    "summary": "候选名单、顺序与参考坐标用于恢复原版结果；它们与 GeoNames 显示名称分别记录来源。本版本未取得这份名单的单独再发布授权，维护者已知悉此未核实项并决定发布；本项目许可不代表原权利人授权。",
+    "text": "Original comparison reference: https://starmapper.com/ . The project AGPL license does not itself grant rights to the original candidate compilation. See recommendations-manifest.json and third_party/recommendation-reference/candidates.json."
   }
 ]

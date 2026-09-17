@@ -1,14 +1,21 @@
 {
-  "method": "qy-geonames-million-plus-regional-top2-v1",
-  "source": "GeoNames cities5000, local licensed catalogue",
+  "method": "browser-original-order-plus-macau-v1",
+  "source": "GeoNames display metadata; original comparison scope and reference coordinates separately recorded",
   "sourceURL": "https://download.geonames.org/export/dump/",
-  "license": "CC-BY-4.0",
+  "license": "CC-BY-4.0 for GeoNames metadata; NOASSERTION for reference compilation",
   "sourceSha256": "0fbe97c0ab9bf6dd8d477d0f39af152cc467144601b25d4b2cd12d0ec3ee99dc",
-  "candidateCount": 891,
-  "chinaCandidateCount": 198,
-  "selection": "Population >= 1,000,000 plus top two available cities per country/region; explicit HK, Macau and Taipei coverage; sort by GeoNames ID. Independently selected, not StarMapper data.",
+  "reference": {
+    "file": "third_party/recommendation-reference/candidates.json",
+    "sha256": "61f58469ca6c0d3b08fac8d5e2d453794f59818bb8feef0e51e08d5d05e16b17",
+    "sourceURL": "https://starmapper.com/",
+    "license": "NOASSERTION",
+    "redistributionCleared": false
+  },
+  "candidateCount": 415,
+  "chinaCandidateCount": 9,
+  "selection": "Original 414 entries in original stable tie order, with Macau appended as in Mini Program 0.3.2. Reference coordinates preserve the numerical comparison. GeoNames provides display names and identity; it is not the source of the reference compilation.",
   "output": {
     "file": "miniprogram/data/candidates.js",
-    "sha256": "c0569dc7118bc795ed91247688739071545361589fb438f7c46fa7a537e8b929"
+    "sha256": "eed5d70f7a209af71cd8333220fb686213f20622d8c42b348292a453a60fdbf7"
   }
 }

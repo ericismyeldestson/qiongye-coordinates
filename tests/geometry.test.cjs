@@ -1,6 +1,6 @@
 const {test}=require('node:test'),assert=require('node:assert/strict');
 const {planetaryLines,equatorial,wrap}=require('../miniprogram/core/sky-lines');
-const {nearby,prepareLines,EARTH_KM}=require('../miniprogram/core/place-rules');
+const {nearby,prepareLines,KM_PER_DEGREE}=require('../miniprogram/core/place-rules');
 const RAD=Math.PI/180;
 test('rising/setting points satisfy the horizon equation and correct hour-angle signs',()=>{
  for(const [ra,dec,gast] of [[0,0,0],[130,23.4,250],[359,-70,4],[12,89,270]]){
@@ -16,12 +16,21 @@ test('equatorial conversion has the expected ecliptic cardinal points',()=>{
  assert.equal(equatorial(0,0,23.4).raDeg,0);assert.ok(Math.abs(equatorial(90,0,23.4).decDeg-23.4)<1e-12);
  assert.ok(Math.abs(equatorial(270,0,23.4).decDeg+23.4)<1e-12);
 });
-test('spherical distance handles date line and the documented 350 km threshold',()=>{
+test('original planar distance preserves direct longitude and the 350 km cutoff',()=>{
  const lines=prepareLines([{planet:'Sun',angle:'MC',points:[{lat:0,lon:179}]}]);
- const [near]=nearby(0,-179,lines);assert.ok(Math.abs(near.distanceKm-2*RAD*EARTH_KM)<1e-8);
+ assert.equal(nearby(0,-179,lines).length,0,'Original rules do not wrap the date line');
  const zero=prepareLines([{planet:'Venus',angle:'DSC',points:[{lat:0,lon:0}]}]);
- assert.equal(nearby(0,(350-.001)/EARTH_KM/RAD,zero).length,1);
- assert.equal(nearby(0,(350+.001)/EARTH_KM/RAD,zero).length,0);
+ assert.equal(nearby(0,(350-.001)/KM_PER_DEGREE,zero).length,1);
+ assert.equal(nearby(0,350/KM_PER_DEGREE,zero).length,1);
+ assert.equal(nearby(0,(350+.001)/KM_PER_DEGREE,zero).length,0);
+});
+test('dense rendering never replaces the original recommendation sampling grid',()=>{
+ const generated=planetaryLines('Sun',0,0,0),lines=prepareLines(generated);
+ const mc=lines.find(l=>l.angle==='MC');assert.equal(mc.points.length,18);
+ assert.ok(generated.find(l=>l.angle==='MC').points.some(p=>p.lat===0));
+ assert.ok(!mc.points.some(p=>p.lat===0),'Reference MC samples are -85,-75,...,85');
+ assert.equal(nearby(0,0,[mc]).length,0,'Preserve the original coarse-grid result');
+ assert.equal(lines.find(l=>l.angle==='ASC').points.length,171);
 });
 test('empty and opposite hemisphere lines never invent a match',()=>{
  assert.deepEqual(nearby(0,0,prepareLines([{planet:'Sun',angle:'MC',points:[]}])),[]);

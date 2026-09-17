@@ -1,6 +1,6 @@
-# Third-party notices — 穹野坐标 0.4.0
+# Third-party notices — 穹野坐标 0.4.1 (local)
 
-Project application code and its independently authored C wrapper, line geometry, recommendation rules, Chinese interpretations and procedural globe rendering are provided under **AGPL-3.0-only**. Third-party components retain the terms below. Source availability does not imply endorsement. The runtime inventory is `runtime-provenance.json`.
+Project application code and its independently authored C wrapper, line geometry, implementation of the original numeric recommendation rules, Chinese interpretations and procedural globe rendering are provided under **AGPL-3.0-only**. Third-party components retain the terms below. Source availability does not imply endorsement. The runtime inventory is `runtime-provenance.json`.
 
 ## Swiss Ephemeris — AGPL v3 selected
 
@@ -26,7 +26,19 @@ The compiler, standard library and generated JavaScript support are used without
 
 Contains modified **GeoNames** data, https://www.geonames.org/, licensed under **Creative Commons Attribution 4.0 International**: https://creativecommons.org/licenses/by/4.0/ . Full terms are included in `miniprogram/licenses/CC-BY-4.0.txt`.
 
-`third_party/geonames/manifest.json` records the September 2026 official cities5000 and administrative-name source URLs and checksums. The included `cities.json.gz` is the previously prepared 69,705-row catalog, with its own hash. Application changes include field selection, JSON encoding, Chinese aliases, 4,412-city offline subset, an independently selected 891-city recommendation subset, and decorative globe endpoints/city dots. These changes do not claim endorsement or accuracy guarantees from GeoNames. City points approximate city centers.
+`third_party/geonames/manifest.json` records the September 2026 official cities5000 and administrative-name source URLs and checksums. The included `cities.json.gz` is the previously prepared 69,705-row catalog, with its own hash. Application changes include field selection, JSON encoding, Chinese aliases, 4,412-city offline subset, display metadata matched to the 415-entry reference candidate scope, and decorative globe endpoints/city dots. Reference candidate selection, ordering and scoring coordinates are recorded separately below; they are not claimed to originate in GeoNames. These changes do not claim endorsement or accuracy guarantees from GeoNames. Offline search points approximate city centers.
+
+## Astronomy Engine — MIT
+
+The official `astronomy-engine` 2.1.19 npm package is obtained from https://registry.npmjs.org/astronomy-engine/-/astronomy-engine-2.1.19.tgz and verified against its published SHA-512 integrity. Upstream: https://github.com/cosinekitty/astronomy . Copyright (c) 2019-2023 Don Cross.
+
+`third_party/astronomy-engine/` contains unmodified readable upstream source, package metadata, the original MIT notice and file hashes. `scripts/prepare-astronomy.cjs` selects unchanged time, obliquity and sidereal-time functions into `miniprogram/vendor/astronomy-time.js` and retains the MIT notice. Other upstream functions are omitted to fit the Mini Program package. Swiss Ephemeris still supplies all planetary positions and houses.
+
+## Original recommendation reference — redistribution not cleared
+
+To satisfy the requested original-result comparison, `third_party/recommendation-reference/candidates.json` records the original 414 city entries, their reference coordinates and ordering, with Macau appended as in 0.3.2. It contains no website function bodies or interpretations. `scripts/prepare-recommendations.cjs` attaches independently sourced GeoNames display names and identifiers.
+
+The original reference compilation comes from the preserved local StarMapper snapshot. No separate redistribution grant has been obtained or asserted. Its status is `NOASSERTION` and `redistributionCleared: false`; it is retained for compatibility. The project's AGPL license and the separate GeoNames license do not grant permission to redistribute that original compilation. On 2026-09-17 the maintainer explicitly instructed publication of 0.4.1 despite this unverified license status. `source-release.json` records that decision for the exact version and reference-file hash. This decision does not grant copyright permission, does not change `redistributionCleared: false`, and does not apply automatically to later versions or changed data.
 
 ## Natural Earth — public domain
 
@@ -53,4 +65,4 @@ WeChat API typings were consulted as interface documentation; no SDK implementat
 
 ## Excluded historical material
 
-The old 0.3.2 package, original website extracts, original globe textures and earlier unknown-build WASM are retained separately in a private historical backup. They are excluded from the 0.4.0 runtime and source archive. No permission to redistribute starmapper.com material is asserted, and this project's AGPL license cannot relicense those excluded materials.
+The old 0.3.2 package, original website extracts, original globe textures and earlier unknown-build WASM are retained separately in a private historical backup. The old implementation, original text, images and WASM remain excluded from the current runtime. The candidate reference facts restored in this version are separately identified above; they are not labelled as independently licensed data. No permission to redistribute starmapper.com material is asserted, and this project's AGPL license cannot relicense those excluded materials.

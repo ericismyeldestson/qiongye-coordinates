@@ -24,12 +24,19 @@ function audit(root=defaultRoot,{release=false,seal=false}={}){
  assert.equal(vendor.revision,upstream.revision);assert.match(vendor.compiler,/4\.0\.15/);
  assert.equal(sha(read(vendor.adapter)),vendor.adapterSha256,'Rebuild Swiss after adapter changes');
  for(const item of vendor.outputs)assert.equal(sha(read(item.file)),item.sha256,'Swiss build output changed: '+item.file);
+ const astronomy=json('third_party/astronomy-engine/provenance.json');
+ assert.equal(astronomy.license,'MIT');
+ for(const item of astronomy.files)assert.equal(sha(read('third_party/astronomy-engine/'+item.file)),item.sha256,'Astronomy Engine input changed: '+item.file);
+ assert.equal(sha(read(astronomy.output.file)),astronomy.output.sha256,'Rebuild the official Astronomy Engine subset');
+ assert.equal(sha(read('third_party/astronomy-engine/LICENSE')),sha(read('miniprogram/licenses/Astronomy-Engine.txt')),'Astronomy Engine notice mismatch');
  const geo=json('third_party/geonames/manifest.json'),earth=json('third_party/natural-earth/provenance.json');
  assert.equal(sha(read('third_party/geonames/cities.json.gz')),geo.catalog_sha256,'GeoNames input changed');
  assert.equal(sha(read('third_party/natural-earth/ne_110m_land.geojson')),earth.sha256,'Natural Earth input changed');
  const recommendations=json('recommendations-manifest.json');
  assert.equal(sha(read(recommendations.output.file)),recommendations.output.sha256,'Recommendation data changed');
  assert.equal(recommendations.sourceSha256,geo.catalog_sha256);
+ assert.equal(sha(read(recommendations.reference.file)),recommendations.reference.sha256,'Reference candidate parameters changed');
+ assert.equal(json(recommendations.reference.file).redistributionCleared,recommendations.reference.redistributionCleared);
  assert.equal(sha(read('LICENSE')),sha(read('miniprogram/licenses/AGPL-3.0.txt')),'AGPL license copy missing or changed');
  assert.equal(sha(read('third_party/swisseph/LICENSE')),sha(read('miniprogram/licenses/Swiss-Ephemeris.txt')),'Swiss notice mismatch');
  const notices=json('license-notices.json');
@@ -43,11 +50,17 @@ function audit(root=defaultRoot,{release=false,seal=false}={}){
  assert(read('miniprogram/pages/index/index.wxml').toString().includes('/pages/licenses/index'),'License page is not reachable');
  if(release){
   assert.equal(config.sourcePublished,true,'Release blocked: matching complete source has not been published');
+  // A maintainer may explicitly accept an unverified data license for one
+  // version and exact reference hash. This records a publishing decision,
+  // not a rights grant, and never changes redistributionCleared.
+  const decision=config.referencePublicationDecision;
+  const acceptedUnverified=decision&&decision.status==='maintainer-accepted-unverified'&&decision.version===config.version&&decision.referenceSha256===recommendations.reference.sha256;
+  assert(recommendations.reference.redistributionCleared===true||acceptedUnverified,'Release blocked: reference candidate compilation redistribution has not been cleared or explicitly accepted for this version and hash');
   const url=new URL(config.sourceURL);assert.equal(url.protocol,'https:','Use an HTTPS public source URL');
   assert(!/^(localhost|127\.|0\.|10\.|192\.168\.)/.test(url.hostname)&&!/(^|\.)example\.(com|org|net)$/.test(url.hostname),'Source URL is not a public release URL');
  }
  if(seal)fs.writeFileSync(path.join(root,'runtime-provenance.json'),JSON.stringify(inventory,null,2)+'\n');
- return {runtimeFiles:actual.length,swissSourceFiles:upstream.files.length,sourcePublished:config.sourcePublished,mode:release?'release':'local'};
+ return {runtimeFiles:actual.length,swissSourceFiles:upstream.files.length,sourcePublished:config.sourcePublished,referenceRedistributionCleared:recommendations.reference.redistributionCleared,referencePublicationDecision:config.referencePublicationDecision||null,mode:release?'release':'local'};
 }
 if(require.main===module){try{console.log(JSON.stringify(audit(defaultRoot,{release:process.argv.includes('--release'),seal:process.argv.includes('--seal')}),null,2));}catch(e){console.error(e.message);process.exitCode=1;}}
 module.exports={audit,walk,sha};

@@ -1,0 +1,2397 @@
+{
+  "source": "Numeric outputs from preserved 0.3.2 reference functions, locally verified against the original browser snapshot. No original implementation is included.",
+  "cases": [
+    {
+      "utc": "1900-01-01T12:00:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Helsinki",
+          "score": 5,
+          "tied": 3,
+          "matchedCities": 242
+        },
+        {
+          "goal": "career",
+          "city": "Lyon",
+          "score": 4,
+          "tied": 4,
+          "matchedCities": 73
+        },
+        {
+          "goal": "love",
+          "city": "Delhi",
+          "score": 4,
+          "tied": 4,
+          "matchedCities": 24
+        },
+        {
+          "goal": "home",
+          "city": "Tokyo",
+          "score": 1,
+          "tied": 5,
+          "matchedCities": 5
+        },
+        {
+          "goal": "creativity",
+          "city": "Boston",
+          "score": 3,
+          "tied": 19,
+          "matchedCities": 106
+        },
+        {
+          "goal": "growth",
+          "city": "Los Angeles",
+          "score": 3,
+          "tied": 39,
+          "matchedCities": 161
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Guangzhou",
+          "score": 1,
+          "tied": 3,
+          "matchedCities": 3
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": "Guangzhou",
+          "score": 3,
+          "tied": 3,
+          "matchedCities": 3
+        },
+        {
+          "goal": "home",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        }
+      ],
+      "scoreMatrixSha256": "fbefcf8394a28eb6f716ea5e1f9528b1a99574c7a99827f266c67cc602c904b3"
+    },
+    {
+      "utc": "1920-06-21T00:00:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Manchester",
+          "score": 5,
+          "tied": 5,
+          "matchedCities": 264
+        },
+        {
+          "goal": "career",
+          "city": "Auckland",
+          "score": 2,
+          "tied": 2,
+          "matchedCities": 23
+        },
+        {
+          "goal": "love",
+          "city": "Boston",
+          "score": 5,
+          "tied": 12,
+          "matchedCities": 62
+        },
+        {
+          "goal": "home",
+          "city": "Birmingham",
+          "score": 4,
+          "tied": 9,
+          "matchedCities": 21
+        },
+        {
+          "goal": "creativity",
+          "city": "Lahore",
+          "score": 5,
+          "tied": 2,
+          "matchedCities": 26
+        },
+        {
+          "goal": "growth",
+          "city": "Seoul",
+          "score": 3,
+          "tied": 3,
+          "matchedCities": 31
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Beijing",
+          "score": 1,
+          "tied": 8,
+          "matchedCities": 8
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "home",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "creativity",
+          "city": "Beijing",
+          "score": 3,
+          "tied": 3,
+          "matchedCities": 4
+        },
+        {
+          "goal": "growth",
+          "city": "Chengdu",
+          "score": 2,
+          "tied": 1,
+          "matchedCities": 1
+        }
+      ],
+      "scoreMatrixSha256": "fe0e0c30c2aa04556da5ac1ab1e1a8df999a675fddd4e943daf74e8abe587d59"
+    },
+    {
+      "utc": "1940-11-27T15:12:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Belfast",
+          "score": 7,
+          "tied": 1,
+          "matchedCities": 228
+        },
+        {
+          "goal": "career",
+          "city": "Kuala Lumpur",
+          "score": 4,
+          "tied": 1,
+          "matchedCities": 100
+        },
+        {
+          "goal": "love",
+          "city": "Glasgow",
+          "score": 5,
+          "tied": 6,
+          "matchedCities": 55
+        },
+        {
+          "goal": "home",
+          "city": "Xi'an",
+          "score": 3,
+          "tied": 3,
+          "matchedCities": 38
+        },
+        {
+          "goal": "creativity",
+          "city": "Boise",
+          "score": 4,
+          "tied": 3,
+          "matchedCities": 115
+        },
+        {
+          "goal": "growth",
+          "city": "London",
+          "score": 5,
+          "tied": 9,
+          "matchedCities": 86
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Xi'an",
+          "score": 2,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "home",
+          "city": "Xi'an",
+          "score": 3,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        }
+      ],
+      "scoreMatrixSha256": "d65458735f50ee1db48f88e41e8e50cc1ccd68a456f80a63f04f06277aab4ccf"
+    },
+    {
+      "utc": "1961-08-05T05:24:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Amsterdam",
+          "score": 4,
+          "tied": 1,
+          "matchedCities": 245
+        },
+        {
+          "goal": "career",
+          "city": "Minneapolis",
+          "score": 4,
+          "tied": 2,
+          "matchedCities": 51
+        },
+        {
+          "goal": "love",
+          "city": "Seoul",
+          "score": 2,
+          "tied": 6,
+          "matchedCities": 7
+        },
+        {
+          "goal": "home",
+          "city": "San Jose",
+          "score": 2,
+          "tied": 47,
+          "matchedCities": 50
+        },
+        {
+          "goal": "creativity",
+          "city": "Cape Town",
+          "score": 4,
+          "tied": 1,
+          "matchedCities": 79
+        },
+        {
+          "goal": "growth",
+          "city": "Minneapolis",
+          "score": 4,
+          "tied": 3,
+          "matchedCities": 81
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Hong Kong",
+          "score": 2,
+          "tied": 4,
+          "matchedCities": 5
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "home",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": "Hong Kong",
+          "score": 1,
+          "tied": 4,
+          "matchedCities": 4
+        }
+      ],
+      "scoreMatrixSha256": "37f6c34045286e164449518eb076020328b555870d8d3b501aebae4ea890f144"
+    },
+    {
+      "utc": "1980-09-12T11:00:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Charlotte",
+          "score": 3,
+          "tied": 31,
+          "matchedCities": 243
+        },
+        {
+          "goal": "career",
+          "city": "Gdańsk",
+          "score": 7,
+          "tied": 1,
+          "matchedCities": 73
+        },
+        {
+          "goal": "love",
+          "city": "Xi'an",
+          "score": 3,
+          "tied": 10,
+          "matchedCities": 18
+        },
+        {
+          "goal": "home",
+          "city": "Sydney",
+          "score": 2,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "creativity",
+          "city": "Istanbul",
+          "score": 3,
+          "tied": 2,
+          "matchedCities": 99
+        },
+        {
+          "goal": "growth",
+          "city": "Berlin",
+          "score": 6,
+          "tied": 3,
+          "matchedCities": 122
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Beijing",
+          "score": 2,
+          "tied": 6,
+          "matchedCities": 7
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": "Xi'an",
+          "score": 3,
+          "tied": 1,
+          "matchedCities": 2
+        },
+        {
+          "goal": "home",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        }
+      ],
+      "scoreMatrixSha256": "0edee3833975df3e7e3f9cca777245fd8e59c8c74198e49fb3054cdf2dfc8e45"
+    },
+    {
+      "utc": "1989-12-13T13:36:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Philadelphia",
+          "score": 7,
+          "tied": 8,
+          "matchedCities": 247
+        },
+        {
+          "goal": "career",
+          "city": "Manchester",
+          "score": 3,
+          "tied": 10,
+          "matchedCities": 78
+        },
+        {
+          "goal": "love",
+          "city": "New York",
+          "score": 3,
+          "tied": 54,
+          "matchedCities": 76
+        },
+        {
+          "goal": "home",
+          "city": "Sydney",
+          "score": 2,
+          "tied": 2,
+          "matchedCities": 8
+        },
+        {
+          "goal": "creativity",
+          "city": "Philadelphia",
+          "score": 6,
+          "tied": 19,
+          "matchedCities": 149
+        },
+        {
+          "goal": "growth",
+          "city": "Philadelphia",
+          "score": 4,
+          "tied": 9,
+          "matchedCities": 146
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Hong Kong",
+          "score": 1,
+          "tied": 2,
+          "matchedCities": 2
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "home",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        }
+      ],
+      "scoreMatrixSha256": "b1fcab2d28d1b96ab50f556bc065190f71ad91c54571743f1dd7c70b0c550966"
+    },
+    {
+      "utc": "2000-01-01T12:00:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Glasgow",
+          "score": 3,
+          "tied": 9,
+          "matchedCities": 253
+        },
+        {
+          "goal": "career",
+          "city": "Glasgow",
+          "score": 6,
+          "tied": 2,
+          "matchedCities": 60
+        },
+        {
+          "goal": "love",
+          "city": "Stockholm",
+          "score": 5,
+          "tied": 4,
+          "matchedCities": 64
+        },
+        {
+          "goal": "home",
+          "city": "Taipei",
+          "score": 3,
+          "tied": 2,
+          "matchedCities": 30
+        },
+        {
+          "goal": "creativity",
+          "city": "Boston",
+          "score": 4,
+          "tied": 3,
+          "matchedCities": 107
+        },
+        {
+          "goal": "growth",
+          "city": "Glasgow",
+          "score": 7,
+          "tied": 2,
+          "matchedCities": 123
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Taipei",
+          "score": 3,
+          "tied": 1,
+          "matchedCities": 3
+        },
+        {
+          "goal": "career",
+          "city": "Taipei",
+          "score": 1,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "love",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "home",
+          "city": "Taipei",
+          "score": 3,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": "Taipei",
+          "score": 1,
+          "tied": 1,
+          "matchedCities": 1
+        }
+      ],
+      "scoreMatrixSha256": "fd72cd16b125a37de116dc8c58f42c4ed66090ca7fca29afc774f95dad150b26"
+    },
+    {
+      "utc": "2004-02-29T23:59:59Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Leeds",
+          "score": 5,
+          "tied": 1,
+          "matchedCities": 258
+        },
+        {
+          "goal": "career",
+          "city": "Lyon",
+          "score": 3,
+          "tied": 12,
+          "matchedCities": 89
+        },
+        {
+          "goal": "love",
+          "city": "Brasília",
+          "score": 3,
+          "tied": 4,
+          "matchedCities": 41
+        },
+        {
+          "goal": "home",
+          "city": "Guangzhou",
+          "score": 3,
+          "tied": 2,
+          "matchedCities": 13
+        },
+        {
+          "goal": "creativity",
+          "city": "Yangon",
+          "score": 4,
+          "tied": 1,
+          "matchedCities": 13
+        },
+        {
+          "goal": "growth",
+          "city": "Yangon",
+          "score": 4,
+          "tied": 1,
+          "matchedCities": 56
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Guangzhou",
+          "score": 1,
+          "tied": 3,
+          "matchedCities": 3
+        },
+        {
+          "goal": "career",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "love",
+          "city": "Chengdu",
+          "score": 1,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "home",
+          "city": "Guangzhou",
+          "score": 3,
+          "tied": 2,
+          "matchedCities": 2
+        },
+        {
+          "goal": "creativity",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "growth",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        }
+      ],
+      "scoreMatrixSha256": "365e9eaaeb428378a02bc6adf8754e71c223c65ddda0e1b5eb10c42b98b0ae5a"
+    },
+    {
+      "utc": "2026-09-15T00:00:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Boston",
+          "score": 4,
+          "tied": 3,
+          "matchedCities": 302
+        },
+        {
+          "goal": "career",
+          "city": "Melbourne",
+          "score": 3,
+          "tied": 1,
+          "matchedCities": 20
+        },
+        {
+          "goal": "love",
+          "city": "Boston",
+          "score": 5,
+          "tied": 6,
+          "matchedCities": 76
+        },
+        {
+          "goal": "home",
+          "city": "Moscow",
+          "score": 5,
+          "tied": 1,
+          "matchedCities": 17
+        },
+        {
+          "goal": "creativity",
+          "city": "Perth",
+          "score": 4,
+          "tied": 1,
+          "matchedCities": 75
+        },
+        {
+          "goal": "growth",
+          "city": "Stockholm",
+          "score": 3,
+          "tied": 9,
+          "matchedCities": 65
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Guangzhou",
+          "score": 1,
+          "tied": 4,
+          "matchedCities": 4
+        },
+        {
+          "goal": "career",
+          "city": "Taipei",
+          "score": 1,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "love",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "home",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        },
+        {
+          "goal": "creativity",
+          "city": "Chengdu",
+          "score": 2,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "growth",
+          "city": "Chengdu",
+          "score": 2,
+          "tied": 1,
+          "matchedCities": 1
+        }
+      ],
+      "scoreMatrixSha256": "c4bc8900a25908e31333d5b5515e063a0d8d7d9cc154aa6ff51167405cc4b880"
+    },
+    {
+      "utc": "2099-12-30T12:00:00Z",
+      "all": [
+        {
+          "goal": "overall",
+          "city": "Lyon",
+          "score": 6,
+          "tied": 1,
+          "matchedCities": 196
+        },
+        {
+          "goal": "career",
+          "city": "Lyon",
+          "score": 5,
+          "tied": 1,
+          "matchedCities": 72
+        },
+        {
+          "goal": "love",
+          "city": "Beijing",
+          "score": 3,
+          "tied": 6,
+          "matchedCities": 38
+        },
+        {
+          "goal": "home",
+          "city": "Moscow",
+          "score": 3,
+          "tied": 2,
+          "matchedCities": 7
+        },
+        {
+          "goal": "creativity",
+          "city": "Buenos Aires",
+          "score": 3,
+          "tied": 2,
+          "matchedCities": 60
+        },
+        {
+          "goal": "growth",
+          "city": "Miami",
+          "score": 5,
+          "tied": 8,
+          "matchedCities": 82
+        }
+      ],
+      "cn": [
+        {
+          "goal": "overall",
+          "city": "Beijing",
+          "score": 2,
+          "tied": 4,
+          "matchedCities": 4
+        },
+        {
+          "goal": "career",
+          "city": "Xi'an",
+          "score": 1,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "love",
+          "city": "Beijing",
+          "score": 3,
+          "tied": 3,
+          "matchedCities": 3
+        },
+        {
+          "goal": "home",
+          "city": "Xi'an",
+          "score": 1,
+          "tied": 1,
+          "matchedCities": 1
+        },
+        {
+          "goal": "creativity",
+          "city": "Beijing",
+          "score": 1,
+          "tied": 3,
+          "matchedCities": 3
+        },
+        {
+          "goal": "growth",
+          "city": null,
+          "score": 0,
+          "tied": 0,
+          "matchedCities": 0
+        }
+      ],
+      "scoreMatrixSha256": "6811730e15b783aaa5caf1e1f7189b1a54652a902ea0f60139442be19358acf4"
+    }
+  ],
+  "weights": [
+    {
+      "goal": "overall",
+      "lines": [
+        {
+          "planet": "Sun",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Sun",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Sun",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Sun",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Moon",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Moon",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Moon",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Moon",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Mercury",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Mercury",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Mercury",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Mercury",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Venus",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Venus",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Venus",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Venus",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Mars",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Mars",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Mars",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Mars",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Neptune",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Neptune",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Neptune",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Neptune",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Pluto",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Pluto",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Pluto",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Pluto",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Chiron",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Chiron",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Chiron",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Chiron",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "North Node",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "North Node",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "North Node",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "North Node",
+          "angle": "DSC",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "goal": "career",
+      "lines": [
+        {
+          "planet": "Sun",
+          "angle": "MC",
+          "weight": 3
+        },
+        {
+          "planet": "Sun",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Sun",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "MC",
+          "weight": 2
+        },
+        {
+          "planet": "Mercury",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "MC",
+          "weight": 2
+        },
+        {
+          "planet": "Venus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Mars",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "MC",
+          "weight": 3
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "DSC",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "goal": "love",
+      "lines": [
+        {
+          "planet": "Sun",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "DSC",
+          "weight": 2
+        },
+        {
+          "planet": "Moon",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "DSC",
+          "weight": 2
+        },
+        {
+          "planet": "Mercury",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Venus",
+          "angle": "DSC",
+          "weight": 3
+        },
+        {
+          "planet": "Mars",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "DSC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "DSC",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "goal": "home",
+      "lines": [
+        {
+          "planet": "Sun",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "IC",
+          "weight": 2
+        },
+        {
+          "planet": "Sun",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "IC",
+          "weight": 3
+        },
+        {
+          "planet": "Moon",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "IC",
+          "weight": 2
+        },
+        {
+          "planet": "Venus",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "IC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "DSC",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "goal": "creativity",
+      "lines": [
+        {
+          "planet": "Sun",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "ASC",
+          "weight": 2
+        },
+        {
+          "planet": "Sun",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Moon",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "ASC",
+          "weight": 2
+        },
+        {
+          "planet": "Mercury",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "MC",
+          "weight": 2
+        },
+        {
+          "planet": "Venus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "ASC",
+          "weight": 3
+        },
+        {
+          "planet": "Venus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "MC",
+          "weight": 2
+        },
+        {
+          "planet": "Neptune",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "ASC",
+          "weight": 3
+        },
+        {
+          "planet": "Neptune",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "DSC",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "goal": "growth",
+      "lines": [
+        {
+          "planet": "Sun",
+          "angle": "MC",
+          "weight": 2
+        },
+        {
+          "planet": "Sun",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Sun",
+          "angle": "ASC",
+          "weight": 2
+        },
+        {
+          "planet": "Sun",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Moon",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "MC",
+          "weight": 2
+        },
+        {
+          "planet": "Mercury",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mercury",
+          "angle": "ASC",
+          "weight": 2
+        },
+        {
+          "planet": "Mercury",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Venus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Mars",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "MC",
+          "weight": 3
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "ASC",
+          "weight": 3
+        },
+        {
+          "planet": "Jupiter",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Saturn",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Saturn",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "MC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Uranus",
+          "angle": "ASC",
+          "weight": 1
+        },
+        {
+          "planet": "Uranus",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Neptune",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Pluto",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "Chiron",
+          "angle": "DSC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "MC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "IC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "ASC",
+          "weight": 0
+        },
+        {
+          "planet": "North Node",
+          "angle": "DSC",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

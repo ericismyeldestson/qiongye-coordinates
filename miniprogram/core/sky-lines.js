@@ -4,9 +4,9 @@ const RAD=Math.PI/180;
 function wrap(deg){return ((deg+180)%360+360)%360-180;}
 function equatorial(longitude,latitude,obliquity){
  const l=longitude*RAD,b=latitude*RAD,e=obliquity*RAD;
- const x=Math.cos(b)*Math.cos(l),y=Math.cos(b)*Math.sin(l)*Math.cos(e)-Math.sin(b)*Math.sin(e);
- const z=Math.cos(b)*Math.sin(l)*Math.sin(e)+Math.sin(b)*Math.cos(e);
- return {raDeg:((Math.atan2(y,x)/RAD)%360+360)%360,decDeg:Math.asin(Math.max(-1,Math.min(1,z)))/RAD};
+ const ra=Math.atan2(Math.sin(l)*Math.cos(e)-Math.tan(b)*Math.sin(e),Math.cos(l))*(180/Math.PI);
+ const dec=Math.asin(Math.sin(b)*Math.cos(e)+Math.cos(b)*Math.sin(e)*Math.sin(l))*(180/Math.PI);
+ return {raDeg:ra<0?ra+360:ra,decDeg:dec};
 }
 function planetaryLines(planet,raDeg,decDeg,gast){
  const meridian=wrap(raDeg-gast),rows={ASC:[],MC:[],DSC:[],IC:[]};
@@ -19,6 +19,9 @@ function planetaryLines(planet,raDeg,decDeg,gast){
   rows.ASC.push({lat,lon:wrap(meridian-hour)});
   rows.DSC.push({lat,lon:wrap(meridian+hour)});
  }
- return ['ASC','MC','DSC','IC'].map(angle=>({planet,angle,points:rows[angle]}));
+ return ['MC','IC','ASC','DSC'].map(angle=>({planet,angle,points:rows[angle],
+  samplePoints:rows[angle].filter(point=>point.lat>=-85&&point.lat<=85&&
+   (angle==='MC'||angle==='IC'?(point.lat+85)%10===0:Number.isInteger(point.lat)))
+ }));
 }
 module.exports={equatorial,planetaryLines,wrap};

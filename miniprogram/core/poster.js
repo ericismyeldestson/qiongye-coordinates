@@ -48,7 +48,7 @@ function drawPoster(c,s){
   const reason=state.analysis.rows.slice(0,2).map(r=>r.planetName+' '+r.angle+' '+r.distanceText).join(' / ');
   wrapped(c,reason||'约 350 公里内没有匹配线路',58,y+87,484,16,23,2);y+=176;
  }
- wrapped(c,'推荐使用穹野坐标的独立主题规则；“最佳”表示当前候选中的主题匹配，供自我探索参考。',40,h-154,520,16,24,2);
+ wrapped(c,'推荐按附近线路与主题权重计算；“最佳”表示当前候选中的主题匹配，供自我探索参考。',40,h-154,520,16,24,2);
  const source=birth.example&&birth.source?birth.source.summary+'；来源未提供秒位':'按所填出生资料计算';
  label(c,source,40,h-89,15,'#8e9eb5');
  label(c,'Swiss Ephemeris 2.10.03  ·  穹野坐标',40,h-52,15,'#bda879');

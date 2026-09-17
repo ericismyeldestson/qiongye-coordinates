@@ -34,7 +34,7 @@ test('share payload rejects altered time, coordinates, source labels and damaged
 test('cold shared-page load needs no previous form and restores relocation, filter and zoom',async()=>{
  const target={city:'澳门',latitude:22.20056,longitude:113.54611,country:'中国'},s={...state,tab:'map',placeGoal:'love',planet:'Venus',angle:'DSC',analysis:{}},v={zoom:3,lat:23,lon:115};
  const p=page(api(),{pendingBirth:birth(1)});p.onLoad({s:input(birth(),s,target,v)});await new Promise(r=>setImmediate(r));
- assert.equal(p.data.error,'');assert.equal(p.birth.name,birth().name);assert.equal(p.data.relocated,true);assert.equal(p.data.locationName,'澳门');assert.equal(p.data.tab,'map');assert.equal(p.data.lineCount,1);assert.deepEqual(p.viewport,v);assert.equal(p.data.candidateCount,198);
+ assert.equal(p.data.error,'');assert.equal(p.birth.name,birth().name);assert.equal(p.data.relocated,true);assert.equal(p.data.locationName,'澳门');assert.equal(p.data.tab,'map');assert.equal(p.data.lineCount,1);assert.deepEqual(p.viewport,v);assert.equal(p.data.candidateCount,9);
  const expected=engine.calculate(p.birth.utc,target.latitude,target.longitude,p.birth.system);assert.deepEqual(p.current.houses,expected.houses);assert.deepEqual(p.raw.lines,expected.lines);
  assert.equal(p.data.analysis.score,createEvaluator(expected.lines).analyse(target,'love').score);
  const outgoing=p.onShareAppMessage(),timeline=p.onShareTimeline();assert.equal(outgoing.path,'/moondata/index?'+timeline.query);assert.equal(decodeShare(timeline.query.slice(2)).target.city,'澳门');
@@ -45,7 +45,7 @@ test('damaged share does not fall back to another person and can return to form'
 test('poster includes current region, recommendations and source without mutating chart',()=>{
  const b=birth(),raw=engine.calculate(b.utc,b.latitude,b.longitude),e=createEvaluator(raw.lines),cn=e.recommendations('cn'),c=context();
  const snapshot={birth:b,raw,current:decorate(raw),state:{...state,recommendations:cn.cards,candidateCount:cn.candidateCount},target:null,viewport};const before=JSON.stringify(snapshot);drawPoster(c,snapshot);
- assert.ok(c.texts.some(t=>t.s.includes('中国（含港澳台） · 198')));for(const card of cn.cards.filter(c=>c.city))assert.ok(c.texts.some(t=>t.s===card.city.name));assert.ok(c.texts.some(t=>t.s.includes('传记来源记录')));assert.equal(before,JSON.stringify(snapshot));assert.ok(c.texts.every(t=>t.y<posterHeight(snapshot)));
+ assert.ok(c.texts.some(t=>t.s.includes('中国（含港澳台） · 9')));for(const card of cn.cards.filter(c=>c.city))assert.ok(c.texts.some(t=>t.s===card.city.name));assert.ok(c.texts.some(t=>t.s.includes('传记来源记录')));assert.equal(before,JSON.stringify(snapshot));assert.ok(c.texts.every(t=>t.y<posterHeight(snapshot)));
 });
 test('all poster variants render 12-body chart and keep content inside image',()=>{
  const b=birth(),raw=engine.calculate(b.utc,b.latitude,b.longitude),e=createEvaluator(raw.lines),r=e.recommendations('all'),current=decorate(raw);

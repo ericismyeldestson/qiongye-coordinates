@@ -1,6 +1,6 @@
 {
   "name": "starmapper-miniprogram",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "scripts": {
     "vendor": "node scripts/prepare-vendor.cjs",
@@ -13,7 +13,8 @@
     "audit:seal": "node scripts/audit-licenses.cjs --seal",
     "check:release": "node scripts/audit-licenses.cjs --release",
     "source:pack": "node scripts/package-source.cjs",
-    "source:release": "node scripts/package-source.cjs --release"
+    "source:release": "node scripts/package-source.cjs --release",
+    "build:astronomy": "node scripts/prepare-astronomy.cjs"
   },
   "license": "AGPL-3.0-only"
 }

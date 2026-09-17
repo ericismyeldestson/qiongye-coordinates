@@ -1,0 +1,2500 @@
+{
+  "schema": 1,
+  "source": "Preserved StarMapper browser behaviour, 2026-09-14; old Mini Program 0.3.2 with Macau appended",
+  "sourceURL": "https://starmapper.com/",
+  "purpose": "Restore the user-requested recommendation scope, reference coordinates and stable tie order. This records comparison data, not a redistribution grant.",
+  "license": "NOASSERTION",
+  "redistributionCleared": false,
+  "cities": [
+    {
+      "name": "New York",
+      "country": "USA",
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    {
+      "name": "Los Angeles",
+      "country": "USA",
+      "lat": 34.0522,
+      "lon": -118.2437
+    },
+    {
+      "name": "Chicago",
+      "country": "USA",
+      "lat": 41.8781,
+      "lon": -87.6298
+    },
+    {
+      "name": "Houston",
+      "country": "USA",
+      "lat": 29.7604,
+      "lon": -95.3698
+    },
+    {
+      "name": "Phoenix",
+      "country": "USA",
+      "lat": 33.4484,
+      "lon": -112.074
+    },
+    {
+      "name": "Philadelphia",
+      "country": "USA",
+      "lat": 39.9526,
+      "lon": -75.1652
+    },
+    {
+      "name": "San Antonio",
+      "country": "USA",
+      "lat": 29.4241,
+      "lon": -98.4936
+    },
+    {
+      "name": "San Diego",
+      "country": "USA",
+      "lat": 32.7157,
+      "lon": -117.1611
+    },
+    {
+      "name": "Dallas",
+      "country": "USA",
+      "lat": 32.7767,
+      "lon": -96.797
+    },
+    {
+      "name": "San Jose",
+      "country": "USA",
+      "lat": 37.3382,
+      "lon": -121.8863
+    },
+    {
+      "name": "Austin",
+      "country": "USA",
+      "lat": 30.2672,
+      "lon": -97.7431
+    },
+    {
+      "name": "Jacksonville",
+      "country": "USA",
+      "lat": 30.3322,
+      "lon": -81.6557
+    },
+    {
+      "name": "San Francisco",
+      "country": "USA",
+      "lat": 37.7749,
+      "lon": -122.4194
+    },
+    {
+      "name": "Columbus",
+      "country": "USA",
+      "lat": 39.9612,
+      "lon": -82.9988
+    },
+    {
+      "name": "Fort Worth",
+      "country": "USA",
+      "lat": 32.7555,
+      "lon": -97.3308
+    },
+    {
+      "name": "Indianapolis",
+      "country": "USA",
+      "lat": 39.7684,
+      "lon": -86.1581
+    },
+    {
+      "name": "Charlotte",
+      "country": "USA",
+      "lat": 35.2271,
+      "lon": -80.8431
+    },
+    {
+      "name": "Seattle",
+      "country": "USA",
+      "lat": 47.6062,
+      "lon": -122.3321
+    },
+    {
+      "name": "Denver",
+      "country": "USA",
+      "lat": 39.7392,
+      "lon": -104.9903
+    },
+    {
+      "name": "Washington",
+      "country": "USA",
+      "lat": 38.9072,
+      "lon": -77.0369
+    },
+    {
+      "name": "Boston",
+      "country": "USA",
+      "lat": 42.3601,
+      "lon": -71.0589
+    },
+    {
+      "name": "Nashville",
+      "country": "USA",
+      "lat": 36.1627,
+      "lon": -86.7816
+    },
+    {
+      "name": "Detroit",
+      "country": "USA",
+      "lat": 42.3314,
+      "lon": -83.0458
+    },
+    {
+      "name": "Portland",
+      "country": "USA",
+      "lat": 45.5152,
+      "lon": -122.6784
+    },
+    {
+      "name": "Las Vegas",
+      "country": "USA",
+      "lat": 36.1699,
+      "lon": -115.1398
+    },
+    {
+      "name": "Memphis",
+      "country": "USA",
+      "lat": 35.1495,
+      "lon": -90.049
+    },
+    {
+      "name": "Louisville",
+      "country": "USA",
+      "lat": 38.2527,
+      "lon": -85.7585
+    },
+    {
+      "name": "Baltimore",
+      "country": "USA",
+      "lat": 39.2904,
+      "lon": -76.6122
+    },
+    {
+      "name": "Milwaukee",
+      "country": "USA",
+      "lat": 43.0389,
+      "lon": -87.9065
+    },
+    {
+      "name": "Albuquerque",
+      "country": "USA",
+      "lat": 35.0844,
+      "lon": -106.6504
+    },
+    {
+      "name": "Tucson",
+      "country": "USA",
+      "lat": 32.2226,
+      "lon": -110.9747
+    },
+    {
+      "name": "Fresno",
+      "country": "USA",
+      "lat": 36.7378,
+      "lon": -119.7871
+    },
+    {
+      "name": "Miami",
+      "country": "USA",
+      "lat": 25.7617,
+      "lon": -80.1918
+    },
+    {
+      "name": "Sacramento",
+      "country": "USA",
+      "lat": 38.5816,
+      "lon": -121.4944
+    },
+    {
+      "name": "Atlanta",
+      "country": "USA",
+      "lat": 33.749,
+      "lon": -84.388
+    },
+    {
+      "name": "Kansas City",
+      "country": "USA",
+      "lat": 39.0997,
+      "lon": -94.5786
+    },
+    {
+      "name": "New Orleans",
+      "country": "USA",
+      "lat": 29.9511,
+      "lon": -90.0715
+    },
+    {
+      "name": "El Paso",
+      "country": "USA",
+      "lat": 31.7619,
+      "lon": -106.485
+    },
+    {
+      "name": "Oklahoma City",
+      "country": "USA",
+      "lat": 35.4676,
+      "lon": -97.5164
+    },
+    {
+      "name": "Omaha",
+      "country": "USA",
+      "lat": 41.2565,
+      "lon": -95.9345
+    },
+    {
+      "name": "Raleigh",
+      "country": "USA",
+      "lat": 35.7796,
+      "lon": -78.6382
+    },
+    {
+      "name": "Minneapolis",
+      "country": "USA",
+      "lat": 44.9778,
+      "lon": -93.265
+    },
+    {
+      "name": "Tampa",
+      "country": "USA",
+      "lat": 27.9506,
+      "lon": -82.4572
+    },
+    {
+      "name": "Orlando",
+      "country": "USA",
+      "lat": 28.5383,
+      "lon": -81.3792
+    },
+    {
+      "name": "St. Louis",
+      "country": "USA",
+      "lat": 38.627,
+      "lon": -90.1994
+    },
+    {
+      "name": "Pittsburgh",
+      "country": "USA",
+      "lat": 40.4406,
+      "lon": -79.9959
+    },
+    {
+      "name": "Cincinnati",
+      "country": "USA",
+      "lat": 39.1031,
+      "lon": -84.512
+    },
+    {
+      "name": "Cleveland",
+      "country": "USA",
+      "lat": 41.4993,
+      "lon": -81.6944
+    },
+    {
+      "name": "Virginia Beach",
+      "country": "USA",
+      "lat": 36.8529,
+      "lon": -75.978
+    },
+    {
+      "name": "Oakland",
+      "country": "USA",
+      "lat": 37.8044,
+      "lon": -122.2712
+    },
+    {
+      "name": "Mesa",
+      "country": "USA",
+      "lat": 33.4152,
+      "lon": -111.8315
+    },
+    {
+      "name": "Colorado Springs",
+      "country": "USA",
+      "lat": 38.8339,
+      "lon": -104.8214
+    },
+    {
+      "name": "Riverside",
+      "country": "USA",
+      "lat": 33.9533,
+      "lon": -117.3962
+    },
+    {
+      "name": "Long Beach",
+      "country": "USA",
+      "lat": 33.7701,
+      "lon": -118.1937
+    },
+    {
+      "name": "Salt Lake City",
+      "country": "USA",
+      "lat": 40.7608,
+      "lon": -111.891
+    },
+    {
+      "name": "Tulsa",
+      "country": "USA",
+      "lat": 36.1539,
+      "lon": -95.9928
+    },
+    {
+      "name": "Arlington, TX",
+      "country": "USA",
+      "lat": 32.7357,
+      "lon": -97.1081
+    },
+    {
+      "name": "Newark",
+      "country": "USA",
+      "lat": 40.7357,
+      "lon": -74.1724
+    },
+    {
+      "name": "Plano",
+      "country": "USA",
+      "lat": 33.0198,
+      "lon": -96.6989
+    },
+    {
+      "name": "Wichita",
+      "country": "USA",
+      "lat": 37.6872,
+      "lon": -97.3301
+    },
+    {
+      "name": "Irvine",
+      "country": "USA",
+      "lat": 33.6846,
+      "lon": -117.8265
+    },
+    {
+      "name": "Durham",
+      "country": "USA",
+      "lat": 35.994,
+      "lon": -78.8986
+    },
+    {
+      "name": "St. Petersburg",
+      "country": "USA",
+      "lat": 27.7676,
+      "lon": -82.6403
+    },
+    {
+      "name": "Chula Vista",
+      "country": "USA",
+      "lat": 32.6401,
+      "lon": -117.0842
+    },
+    {
+      "name": "Toledo",
+      "country": "USA",
+      "lat": 41.6528,
+      "lon": -83.5379
+    },
+    {
+      "name": "Fort Wayne",
+      "country": "USA",
+      "lat": 41.0793,
+      "lon": -85.1394
+    },
+    {
+      "name": "Laredo",
+      "country": "USA",
+      "lat": 27.5036,
+      "lon": -99.5075
+    },
+    {
+      "name": "Jersey City",
+      "country": "USA",
+      "lat": 40.7178,
+      "lon": -74.0431
+    },
+    {
+      "name": "Chandler",
+      "country": "USA",
+      "lat": 33.3062,
+      "lon": -111.8413
+    },
+    {
+      "name": "Madison",
+      "country": "USA",
+      "lat": 43.0731,
+      "lon": -89.4012
+    },
+    {
+      "name": "Lubbock",
+      "country": "USA",
+      "lat": 33.5779,
+      "lon": -101.8552
+    },
+    {
+      "name": "Scottsdale",
+      "country": "USA",
+      "lat": 33.4942,
+      "lon": -111.9261
+    },
+    {
+      "name": "Reno",
+      "country": "USA",
+      "lat": 39.5296,
+      "lon": -119.8138
+    },
+    {
+      "name": "Buffalo",
+      "country": "USA",
+      "lat": 42.8864,
+      "lon": -78.8784
+    },
+    {
+      "name": "Gilbert",
+      "country": "USA",
+      "lat": 33.3528,
+      "lon": -111.789
+    },
+    {
+      "name": "Glendale",
+      "country": "USA",
+      "lat": 33.5387,
+      "lon": -112.186
+    },
+    {
+      "name": "North Las Vegas",
+      "country": "USA",
+      "lat": 36.1989,
+      "lon": -115.1175
+    },
+    {
+      "name": "Winston-Salem",
+      "country": "USA",
+      "lat": 36.0999,
+      "lon": -80.2442
+    },
+    {
+      "name": "Chesapeake",
+      "country": "USA",
+      "lat": 36.7682,
+      "lon": -76.2875
+    },
+    {
+      "name": "Norfolk",
+      "country": "USA",
+      "lat": 36.8508,
+      "lon": -76.2859
+    },
+    {
+      "name": "Fremont",
+      "country": "USA",
+      "lat": 37.5485,
+      "lon": -121.9886
+    },
+    {
+      "name": "Garland",
+      "country": "USA",
+      "lat": 32.9126,
+      "lon": -96.6389
+    },
+    {
+      "name": "Irving",
+      "country": "USA",
+      "lat": 32.814,
+      "lon": -96.9489
+    },
+    {
+      "name": "Hialeah",
+      "country": "USA",
+      "lat": 25.8576,
+      "lon": -80.2781
+    },
+    {
+      "name": "Richmond",
+      "country": "USA",
+      "lat": 37.5407,
+      "lon": -77.436
+    },
+    {
+      "name": "Boise",
+      "country": "USA",
+      "lat": 43.615,
+      "lon": -116.2023
+    },
+    {
+      "name": "Spokane",
+      "country": "USA",
+      "lat": 47.6588,
+      "lon": -117.426
+    },
+    {
+      "name": "Frisco",
+      "country": "USA",
+      "lat": 33.1507,
+      "lon": -96.8236
+    },
+    {
+      "name": "San Bernardino",
+      "country": "USA",
+      "lat": 34.1083,
+      "lon": -117.2898
+    },
+    {
+      "name": "Birmingham",
+      "country": "USA",
+      "lat": 33.5207,
+      "lon": -86.8025
+    },
+    {
+      "name": "Rochester, NY",
+      "country": "USA",
+      "lat": 43.1566,
+      "lon": -77.6088
+    },
+    {
+      "name": "Des Moines",
+      "country": "USA",
+      "lat": 41.5868,
+      "lon": -93.625
+    },
+    {
+      "name": "Modesto",
+      "country": "USA",
+      "lat": 37.6391,
+      "lon": -120.9969
+    },
+    {
+      "name": "Fayetteville",
+      "country": "USA",
+      "lat": 35.0527,
+      "lon": -78.8784
+    },
+    {
+      "name": "Tacoma",
+      "country": "USA",
+      "lat": 47.2529,
+      "lon": -122.4443
+    },
+    {
+      "name": "Fontana",
+      "country": "USA",
+      "lat": 34.0922,
+      "lon": -117.435
+    },
+    {
+      "name": "Oxnard",
+      "country": "USA",
+      "lat": 34.1975,
+      "lon": -119.1771
+    },
+    {
+      "name": "Moreno Valley",
+      "country": "USA",
+      "lat": 33.9425,
+      "lon": -117.2297
+    },
+    {
+      "name": "Columbus, GA",
+      "country": "USA",
+      "lat": 32.461,
+      "lon": -84.9877
+    },
+    {
+      "name": "Montgomery",
+      "country": "USA",
+      "lat": 32.3668,
+      "lon": -86.3
+    },
+    {
+      "name": "Aurora",
+      "country": "USA",
+      "lat": 39.7294,
+      "lon": -104.8319
+    },
+    {
+      "name": "Yonkers",
+      "country": "USA",
+      "lat": 40.9312,
+      "lon": -73.8987
+    },
+    {
+      "name": "Akron",
+      "country": "USA",
+      "lat": 41.0814,
+      "lon": -81.519
+    },
+    {
+      "name": "Little Rock",
+      "country": "USA",
+      "lat": 34.7465,
+      "lon": -92.2896
+    },
+    {
+      "name": "Huntington Beach",
+      "country": "USA",
+      "lat": 33.6603,
+      "lon": -117.9992
+    },
+    {
+      "name": "Grand Rapids",
+      "country": "USA",
+      "lat": 42.9634,
+      "lon": -85.6681
+    },
+    {
+      "name": "Grand Prairie",
+      "country": "USA",
+      "lat": 32.746,
+      "lon": -96.9978
+    },
+    {
+      "name": "Overland Park",
+      "country": "USA",
+      "lat": 38.9822,
+      "lon": -94.6708
+    },
+    {
+      "name": "Knoxville",
+      "country": "USA",
+      "lat": 35.9606,
+      "lon": -83.9207
+    },
+    {
+      "name": "Port St. Lucie",
+      "country": "USA",
+      "lat": 27.273,
+      "lon": -80.3582
+    },
+    {
+      "name": "Tallahassee",
+      "country": "USA",
+      "lat": 30.4383,
+      "lon": -84.2807
+    },
+    {
+      "name": "Worcester",
+      "country": "USA",
+      "lat": 42.2626,
+      "lon": -71.8023
+    },
+    {
+      "name": "Tempe",
+      "country": "USA",
+      "lat": 33.4255,
+      "lon": -111.94
+    },
+    {
+      "name": "Santa Clarita",
+      "country": "USA",
+      "lat": 34.3917,
+      "lon": -118.5426
+    },
+    {
+      "name": "Providence",
+      "country": "USA",
+      "lat": 41.824,
+      "lon": -71.4128
+    },
+    {
+      "name": "Chattanooga",
+      "country": "USA",
+      "lat": 35.0456,
+      "lon": -85.3097
+    },
+    {
+      "name": "Fort Lauderdale",
+      "country": "USA",
+      "lat": 26.1224,
+      "lon": -80.1373
+    },
+    {
+      "name": "Rancho Cucamonga",
+      "country": "USA",
+      "lat": 34.1064,
+      "lon": -117.5931
+    },
+    {
+      "name": "Santa Rosa",
+      "country": "USA",
+      "lat": 38.4404,
+      "lon": -122.7141
+    },
+    {
+      "name": "Salinas",
+      "country": "USA",
+      "lat": 36.6777,
+      "lon": -121.6555
+    },
+    {
+      "name": "Oceanside",
+      "country": "USA",
+      "lat": 33.1959,
+      "lon": -117.3795
+    },
+    {
+      "name": "Vancouver, WA",
+      "country": "USA",
+      "lat": 45.6387,
+      "lon": -122.6615
+    },
+    {
+      "name": "Salem",
+      "country": "USA",
+      "lat": 44.9429,
+      "lon": -123.0351
+    },
+    {
+      "name": "Springfield, MO",
+      "country": "USA",
+      "lat": 37.209,
+      "lon": -93.2923
+    },
+    {
+      "name": "Corpus Christi",
+      "country": "USA",
+      "lat": 27.8006,
+      "lon": -97.3964
+    },
+    {
+      "name": "Pembroke Pines",
+      "country": "USA",
+      "lat": 26.0128,
+      "lon": -80.2236
+    },
+    {
+      "name": "Eugene",
+      "country": "USA",
+      "lat": 44.0521,
+      "lon": -123.0868
+    },
+    {
+      "name": "Sioux Falls",
+      "country": "USA",
+      "lat": 43.5446,
+      "lon": -96.7311
+    },
+    {
+      "name": "Peoria, AZ",
+      "country": "USA",
+      "lat": 33.5806,
+      "lon": -112.2374
+    },
+    {
+      "name": "Lancaster",
+      "country": "USA",
+      "lat": 34.6868,
+      "lon": -118.1542
+    },
+    {
+      "name": "Elk Grove",
+      "country": "USA",
+      "lat": 38.4088,
+      "lon": -121.3716
+    },
+    {
+      "name": "Palmdale",
+      "country": "USA",
+      "lat": 34.5794,
+      "lon": -118.1165
+    },
+    {
+      "name": "Springfield, MA",
+      "country": "USA",
+      "lat": 42.1015,
+      "lon": -72.5898
+    },
+    {
+      "name": "Pasadena",
+      "country": "USA",
+      "lat": 34.1478,
+      "lon": -118.1445
+    },
+    {
+      "name": "Pomona",
+      "country": "USA",
+      "lat": 34.0551,
+      "lon": -117.7522
+    },
+    {
+      "name": "Hayward",
+      "country": "USA",
+      "lat": 37.6688,
+      "lon": -122.0808
+    },
+    {
+      "name": "Fort Collins",
+      "country": "USA",
+      "lat": 40.5853,
+      "lon": -105.0844
+    },
+    {
+      "name": "Corona",
+      "country": "USA",
+      "lat": 33.8753,
+      "lon": -117.5664
+    },
+    {
+      "name": "Rockford",
+      "country": "USA",
+      "lat": 42.2711,
+      "lon": -89.094
+    },
+    {
+      "name": "Joliet",
+      "country": "USA",
+      "lat": 41.525,
+      "lon": -88.0817
+    },
+    {
+      "name": "Paterson",
+      "country": "USA",
+      "lat": 40.9168,
+      "lon": -74.1718
+    },
+    {
+      "name": "Lakewood",
+      "country": "USA",
+      "lat": 39.7047,
+      "lon": -105.0814
+    },
+    {
+      "name": "Santa Maria",
+      "country": "USA",
+      "lat": 34.953,
+      "lon": -120.4357
+    },
+    {
+      "name": "Torrance",
+      "country": "USA",
+      "lat": 33.8358,
+      "lon": -118.3406
+    },
+    {
+      "name": "Sunnyvale",
+      "country": "USA",
+      "lat": 37.3688,
+      "lon": -122.0363
+    },
+    {
+      "name": "Escondido",
+      "country": "USA",
+      "lat": 33.1192,
+      "lon": -117.0864
+    },
+    {
+      "name": "Hollywood",
+      "country": "USA",
+      "lat": 26.0112,
+      "lon": -80.1495
+    },
+    {
+      "name": "Pasadena, TX",
+      "country": "USA",
+      "lat": 29.6911,
+      "lon": -95.2091
+    },
+    {
+      "name": "Orange",
+      "country": "USA",
+      "lat": 33.7879,
+      "lon": -117.8531
+    },
+    {
+      "name": "Naperville",
+      "country": "USA",
+      "lat": 41.7508,
+      "lon": -88.1535
+    },
+    {
+      "name": "Mesquite",
+      "country": "USA",
+      "lat": 32.7668,
+      "lon": -96.5992
+    },
+    {
+      "name": "Dayton",
+      "country": "USA",
+      "lat": 39.7589,
+      "lon": -84.1916
+    },
+    {
+      "name": "Savannah",
+      "country": "USA",
+      "lat": 32.0809,
+      "lon": -81.0912
+    },
+    {
+      "name": "Clarksville",
+      "country": "USA",
+      "lat": 36.5298,
+      "lon": -87.3595
+    },
+    {
+      "name": "Fullerton",
+      "country": "USA",
+      "lat": 33.8704,
+      "lon": -117.9242
+    },
+    {
+      "name": "Killeen",
+      "country": "USA",
+      "lat": 31.1171,
+      "lon": -97.7278
+    },
+    {
+      "name": "Hampton",
+      "country": "USA",
+      "lat": 37.0299,
+      "lon": -76.3452
+    },
+    {
+      "name": "McAllen",
+      "country": "USA",
+      "lat": 26.2034,
+      "lon": -98.23
+    },
+    {
+      "name": "Warren",
+      "country": "USA",
+      "lat": 42.5145,
+      "lon": -83.0147
+    },
+    {
+      "name": "Bellevue",
+      "country": "USA",
+      "lat": 47.6101,
+      "lon": -122.2015
+    },
+    {
+      "name": "Columbia",
+      "country": "USA",
+      "lat": 34.0007,
+      "lon": -81.0348
+    },
+    {
+      "name": "Newport News",
+      "country": "USA",
+      "lat": 37.0871,
+      "lon": -76.473
+    },
+    {
+      "name": "Sterling Heights",
+      "country": "USA",
+      "lat": 42.5803,
+      "lon": -83.0302
+    },
+    {
+      "name": "Santa Clara",
+      "country": "USA",
+      "lat": 37.3541,
+      "lon": -121.9552
+    },
+    {
+      "name": "Round Rock",
+      "country": "USA",
+      "lat": 30.5083,
+      "lon": -97.6789
+    },
+    {
+      "name": "Elizabeth",
+      "country": "USA",
+      "lat": 40.664,
+      "lon": -74.2107
+    },
+    {
+      "name": "Kent",
+      "country": "USA",
+      "lat": 47.3809,
+      "lon": -122.2348
+    },
+    {
+      "name": "Thornton",
+      "country": "USA",
+      "lat": 39.868,
+      "lon": -104.9719
+    },
+    {
+      "name": "Carrollton",
+      "country": "USA",
+      "lat": 32.9537,
+      "lon": -96.8903
+    },
+    {
+      "name": "Midland",
+      "country": "USA",
+      "lat": 31.9973,
+      "lon": -102.0779
+    },
+    {
+      "name": "Charleston",
+      "country": "USA",
+      "lat": 32.7765,
+      "lon": -79.9311
+    },
+    {
+      "name": "Denton",
+      "country": "USA",
+      "lat": 33.2148,
+      "lon": -97.1331
+    },
+    {
+      "name": "West Valley City",
+      "country": "USA",
+      "lat": 40.6916,
+      "lon": -111.9938
+    },
+    {
+      "name": "Olathe",
+      "country": "USA",
+      "lat": 38.8814,
+      "lon": -94.8191
+    },
+    {
+      "name": "Waco",
+      "country": "USA",
+      "lat": 31.5493,
+      "lon": -97.1467
+    },
+    {
+      "name": "Gainesville",
+      "country": "USA",
+      "lat": 29.6516,
+      "lon": -82.3248
+    },
+    {
+      "name": "Cedar Rapids",
+      "country": "USA",
+      "lat": 41.9779,
+      "lon": -91.6656
+    },
+    {
+      "name": "Visalia",
+      "country": "USA",
+      "lat": 36.3302,
+      "lon": -119.2921
+    },
+    {
+      "name": "San Mateo",
+      "country": "USA",
+      "lat": 37.563,
+      "lon": -122.3255
+    },
+    {
+      "name": "Antioch",
+      "country": "USA",
+      "lat": 38.0049,
+      "lon": -121.8058
+    },
+    {
+      "name": "Lansing",
+      "country": "USA",
+      "lat": 42.7325,
+      "lon": -84.5555
+    },
+    {
+      "name": "High Point",
+      "country": "USA",
+      "lat": 35.9557,
+      "lon": -80.0053
+    },
+    {
+      "name": "Downey",
+      "country": "USA",
+      "lat": 33.9401,
+      "lon": -118.1332
+    },
+    {
+      "name": "Peoria, IL",
+      "country": "USA",
+      "lat": 40.6936,
+      "lon": -89.589
+    },
+    {
+      "name": "Norman",
+      "country": "USA",
+      "lat": 35.2226,
+      "lon": -97.4395
+    },
+    {
+      "name": "Berkeley",
+      "country": "USA",
+      "lat": 37.8715,
+      "lon": -122.273
+    },
+    {
+      "name": "Richardson",
+      "country": "USA",
+      "lat": 32.9483,
+      "lon": -96.7299
+    },
+    {
+      "name": "Arlington, VA",
+      "country": "USA",
+      "lat": 38.8816,
+      "lon": -77.091
+    },
+    {
+      "name": "Ann Arbor",
+      "country": "USA",
+      "lat": 42.2808,
+      "lon": -83.743
+    },
+    {
+      "name": "Rochester, MN",
+      "country": "USA",
+      "lat": 44.0121,
+      "lon": -92.4802
+    },
+    {
+      "name": "Cambridge",
+      "country": "USA",
+      "lat": 42.3736,
+      "lon": -71.1097
+    },
+    {
+      "name": "Sugar Land",
+      "country": "USA",
+      "lat": 29.6197,
+      "lon": -95.6349
+    },
+    {
+      "name": "Columbia, MO",
+      "country": "USA",
+      "lat": 38.9517,
+      "lon": -92.3341
+    },
+    {
+      "name": "Athens, GA",
+      "country": "USA",
+      "lat": 33.9519,
+      "lon": -83.3576
+    },
+    {
+      "name": "Wilmington, NC",
+      "country": "USA",
+      "lat": 34.2104,
+      "lon": -77.8868
+    },
+    {
+      "name": "Hartford",
+      "country": "USA",
+      "lat": 41.7658,
+      "lon": -72.6734
+    },
+    {
+      "name": "Boulder",
+      "country": "USA",
+      "lat": 40.015,
+      "lon": -105.2705
+    },
+    {
+      "name": "Allentown",
+      "country": "USA",
+      "lat": 40.6084,
+      "lon": -75.4902
+    },
+    {
+      "name": "St. Paul",
+      "country": "USA",
+      "lat": 44.9537,
+      "lon": -93.09
+    },
+    {
+      "name": "Thousand Oaks",
+      "country": "USA",
+      "lat": 34.1706,
+      "lon": -118.8376
+    },
+    {
+      "name": "New Haven",
+      "country": "USA",
+      "lat": 41.3083,
+      "lon": -72.9279
+    },
+    {
+      "name": "West Covina",
+      "country": "USA",
+      "lat": 34.0686,
+      "lon": -117.939
+    },
+    {
+      "name": "El Monte",
+      "country": "USA",
+      "lat": 34.0686,
+      "lon": -118.0276
+    },
+    {
+      "name": "Abilene",
+      "country": "USA",
+      "lat": 32.4487,
+      "lon": -99.7331
+    },
+    {
+      "name": "Evansville",
+      "country": "USA",
+      "lat": 37.9716,
+      "lon": -87.5711
+    },
+    {
+      "name": "South Bend",
+      "country": "USA",
+      "lat": 41.6764,
+      "lon": -86.252
+    },
+    {
+      "name": "Elgin",
+      "country": "USA",
+      "lat": 42.0354,
+      "lon": -88.2826
+    },
+    {
+      "name": "Green Bay",
+      "country": "USA",
+      "lat": 44.5133,
+      "lon": -88.0133
+    },
+    {
+      "name": "Daly City",
+      "country": "USA",
+      "lat": 37.7059,
+      "lon": -122.4703
+    },
+    {
+      "name": "Burbank",
+      "country": "USA",
+      "lat": 34.1808,
+      "lon": -118.309
+    },
+    {
+      "name": "Toronto",
+      "country": "Canada",
+      "lat": 43.6532,
+      "lon": -79.3832
+    },
+    {
+      "name": "Montreal",
+      "country": "Canada",
+      "lat": 45.5017,
+      "lon": -73.5673
+    },
+    {
+      "name": "Vancouver",
+      "country": "Canada",
+      "lat": 49.2827,
+      "lon": -123.1207
+    },
+    {
+      "name": "Calgary",
+      "country": "Canada",
+      "lat": 51.0447,
+      "lon": -114.0719
+    },
+    {
+      "name": "Edmonton",
+      "country": "Canada",
+      "lat": 53.5461,
+      "lon": -113.4937
+    },
+    {
+      "name": "Ottawa",
+      "country": "Canada",
+      "lat": 45.4215,
+      "lon": -75.6972
+    },
+    {
+      "name": "Winnipeg",
+      "country": "Canada",
+      "lat": 49.8954,
+      "lon": -97.1385
+    },
+    {
+      "name": "Quebec City",
+      "country": "Canada",
+      "lat": 46.8139,
+      "lon": -71.2082
+    },
+    {
+      "name": "Hamilton",
+      "country": "Canada",
+      "lat": 43.2557,
+      "lon": -79.8711
+    },
+    {
+      "name": "London",
+      "country": "UK",
+      "lat": 51.5074,
+      "lon": -0.1278
+    },
+    {
+      "name": "Birmingham",
+      "country": "UK",
+      "lat": 52.4862,
+      "lon": -1.8904
+    },
+    {
+      "name": "Manchester",
+      "country": "UK",
+      "lat": 53.4808,
+      "lon": -2.2426
+    },
+    {
+      "name": "Leeds",
+      "country": "UK",
+      "lat": 53.8008,
+      "lon": -1.5491
+    },
+    {
+      "name": "Glasgow",
+      "country": "UK",
+      "lat": 55.8642,
+      "lon": -4.2518
+    },
+    {
+      "name": "Liverpool",
+      "country": "UK",
+      "lat": 53.4084,
+      "lon": -2.9916
+    },
+    {
+      "name": "Bristol",
+      "country": "UK",
+      "lat": 51.4545,
+      "lon": -2.5879
+    },
+    {
+      "name": "Edinburgh",
+      "country": "UK",
+      "lat": 55.9533,
+      "lon": -3.1883
+    },
+    {
+      "name": "Dublin",
+      "country": "Ireland",
+      "lat": 53.3498,
+      "lon": -6.2603
+    },
+    {
+      "name": "Belfast",
+      "country": "UK",
+      "lat": 54.5973,
+      "lon": -5.9301
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    {
+      "name": "Lyon",
+      "country": "France",
+      "lat": 45.764,
+      "lon": 4.8357
+    },
+    {
+      "name": "Marseille",
+      "country": "France",
+      "lat": 43.2965,
+      "lon": 5.3698
+    },
+    {
+      "name": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lon": 13.405
+    },
+    {
+      "name": "Munich",
+      "country": "Germany",
+      "lat": 48.1351,
+      "lon": 11.582
+    },
+    {
+      "name": "Hamburg",
+      "country": "Germany",
+      "lat": 53.5511,
+      "lon": 9.9937
+    },
+    {
+      "name": "Cologne",
+      "country": "Germany",
+      "lat": 50.9375,
+      "lon": 6.9603
+    },
+    {
+      "name": "Frankfurt",
+      "country": "Germany",
+      "lat": 50.1109,
+      "lon": 8.6821
+    },
+    {
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "lat": 52.3676,
+      "lon": 4.9041
+    },
+    {
+      "name": "Rotterdam",
+      "country": "Netherlands",
+      "lat": 51.9225,
+      "lon": 4.4792
+    },
+    {
+      "name": "Brussels",
+      "country": "Belgium",
+      "lat": 50.8503,
+      "lon": 4.3517
+    },
+    {
+      "name": "Madrid",
+      "country": "Spain",
+      "lat": 40.4168,
+      "lon": -3.7038
+    },
+    {
+      "name": "Barcelona",
+      "country": "Spain",
+      "lat": 41.3851,
+      "lon": 2.1734
+    },
+    {
+      "name": "Valencia",
+      "country": "Spain",
+      "lat": 39.4699,
+      "lon": -0.3763
+    },
+    {
+      "name": "Seville",
+      "country": "Spain",
+      "lat": 37.3891,
+      "lon": -5.9845
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "lat": 41.9028,
+      "lon": 12.4964
+    },
+    {
+      "name": "Milan",
+      "country": "Italy",
+      "lat": 45.4642,
+      "lon": 9.19
+    },
+    {
+      "name": "Naples",
+      "country": "Italy",
+      "lat": 40.8518,
+      "lon": 14.2681
+    },
+    {
+      "name": "Turin",
+      "country": "Italy",
+      "lat": 45.0703,
+      "lon": 7.6869
+    },
+    {
+      "name": "Florence",
+      "country": "Italy",
+      "lat": 43.7696,
+      "lon": 11.2558
+    },
+    {
+      "name": "Vienna",
+      "country": "Austria",
+      "lat": 48.2082,
+      "lon": 16.3738
+    },
+    {
+      "name": "Zurich",
+      "country": "Switzerland",
+      "lat": 47.3769,
+      "lon": 8.5417
+    },
+    {
+      "name": "Geneva",
+      "country": "Switzerland",
+      "lat": 46.2044,
+      "lon": 6.1432
+    },
+    {
+      "name": "Lisbon",
+      "country": "Portugal",
+      "lat": 38.7223,
+      "lon": -9.1393
+    },
+    {
+      "name": "Porto",
+      "country": "Portugal",
+      "lat": 41.1579,
+      "lon": -8.6291
+    },
+    {
+      "name": "Athens",
+      "country": "Greece",
+      "lat": 37.9838,
+      "lon": 23.7275
+    },
+    {
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "lat": 55.6761,
+      "lon": 12.5683
+    },
+    {
+      "name": "Stockholm",
+      "country": "Sweden",
+      "lat": 59.3293,
+      "lon": 18.0686
+    },
+    {
+      "name": "Oslo",
+      "country": "Norway",
+      "lat": 59.9139,
+      "lon": 10.7522
+    },
+    {
+      "name": "Helsinki",
+      "country": "Finland",
+      "lat": 60.1695,
+      "lon": 24.9354
+    },
+    {
+      "name": "Moscow",
+      "country": "Russia",
+      "lat": 55.7558,
+      "lon": 37.6173
+    },
+    {
+      "name": "Saint Petersburg",
+      "country": "Russia",
+      "lat": 59.9343,
+      "lon": 30.3351
+    },
+    {
+      "name": "Warsaw",
+      "country": "Poland",
+      "lat": 52.2297,
+      "lon": 21.0122
+    },
+    {
+      "name": "Krakow",
+      "country": "Poland",
+      "lat": 50.0647,
+      "lon": 19.945
+    },
+    {
+      "name": "Prague",
+      "country": "Czech Republic",
+      "lat": 50.0755,
+      "lon": 14.4378
+    },
+    {
+      "name": "Budapest",
+      "country": "Hungary",
+      "lat": 47.4979,
+      "lon": 19.0402
+    },
+    {
+      "name": "Bucharest",
+      "country": "Romania",
+      "lat": 44.4268,
+      "lon": 26.1025
+    },
+    {
+      "name": "Sofia",
+      "country": "Bulgaria",
+      "lat": 42.6977,
+      "lon": 23.3219
+    },
+    {
+      "name": "Kiev",
+      "country": "Ukraine",
+      "lat": 50.4501,
+      "lon": 30.5234
+    },
+    {
+      "name": "Istanbul",
+      "country": "Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784
+    },
+    {
+      "name": "Ankara",
+      "country": "Turkey",
+      "lat": 39.9334,
+      "lon": 32.8597
+    },
+    {
+      "name": "Dubai",
+      "country": "UAE",
+      "lat": 25.2048,
+      "lon": 55.2708
+    },
+    {
+      "name": "Abu Dhabi",
+      "country": "UAE",
+      "lat": 24.4539,
+      "lon": 54.3773
+    },
+    {
+      "name": "Tel Aviv",
+      "country": "Israel",
+      "lat": 32.0853,
+      "lon": 34.7818
+    },
+    {
+      "name": "Jerusalem",
+      "country": "Israel",
+      "lat": 31.7683,
+      "lon": 35.2137
+    },
+    {
+      "name": "Riyadh",
+      "country": "Saudi Arabia",
+      "lat": 24.7136,
+      "lon": 46.6753
+    },
+    {
+      "name": "Jeddah",
+      "country": "Saudi Arabia",
+      "lat": 21.5433,
+      "lon": 39.1728
+    },
+    {
+      "name": "Tehran",
+      "country": "Iran",
+      "lat": 35.6892,
+      "lon": 51.389
+    },
+    {
+      "name": "Baghdad",
+      "country": "Iraq",
+      "lat": 33.3152,
+      "lon": 44.3661
+    },
+    {
+      "name": "Doha",
+      "country": "Qatar",
+      "lat": 25.2854,
+      "lon": 51.531
+    },
+    {
+      "name": "Kuwait City",
+      "country": "Kuwait",
+      "lat": 29.3759,
+      "lon": 47.9774
+    },
+    {
+      "name": "Amman",
+      "country": "Jordan",
+      "lat": 31.9454,
+      "lon": 35.9284
+    },
+    {
+      "name": "Beirut",
+      "country": "Lebanon",
+      "lat": 33.8938,
+      "lon": 35.5018
+    },
+    {
+      "name": "Tokyo",
+      "country": "Japan",
+      "lat": 35.6762,
+      "lon": 139.6503
+    },
+    {
+      "name": "Osaka",
+      "country": "Japan",
+      "lat": 34.6937,
+      "lon": 135.5023
+    },
+    {
+      "name": "Kyoto",
+      "country": "Japan",
+      "lat": 35.0116,
+      "lon": 135.7681
+    },
+    {
+      "name": "Nagoya",
+      "country": "Japan",
+      "lat": 35.1815,
+      "lon": 136.9066
+    },
+    {
+      "name": "Seoul",
+      "country": "South Korea",
+      "lat": 37.5665,
+      "lon": 126.978
+    },
+    {
+      "name": "Busan",
+      "country": "South Korea",
+      "lat": 35.1028,
+      "lon": 129.0403
+    },
+    {
+      "name": "Beijing",
+      "country": "China",
+      "lat": 39.9042,
+      "lon": 116.4074
+    },
+    {
+      "name": "Shanghai",
+      "country": "China",
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    {
+      "name": "Hong Kong",
+      "country": "China",
+      "lat": 22.3193,
+      "lon": 114.1694
+    },
+    {
+      "name": "Guangzhou",
+      "country": "China",
+      "lat": 23.1291,
+      "lon": 113.2644
+    },
+    {
+      "name": "Shenzhen",
+      "country": "China",
+      "lat": 22.5431,
+      "lon": 114.0579
+    },
+    {
+      "name": "Chengdu",
+      "country": "China",
+      "lat": 30.5728,
+      "lon": 104.0668
+    },
+    {
+      "name": "Xi'an",
+      "country": "China",
+      "lat": 34.3416,
+      "lon": 108.9398
+    },
+    {
+      "name": "Taipei",
+      "country": "Taiwan",
+      "lat": 25.033,
+      "lon": 121.5654
+    },
+    {
+      "name": "Singapore",
+      "country": "Singapore",
+      "lat": 1.3521,
+      "lon": 103.8198
+    },
+    {
+      "name": "Bangkok",
+      "country": "Thailand",
+      "lat": 13.7563,
+      "lon": 100.5018
+    },
+    {
+      "name": "Chiang Mai",
+      "country": "Thailand",
+      "lat": 18.7883,
+      "lon": 98.9853
+    },
+    {
+      "name": "Kuala Lumpur",
+      "country": "Malaysia",
+      "lat": 3.139,
+      "lon": 101.6869
+    },
+    {
+      "name": "Jakarta",
+      "country": "Indonesia",
+      "lat": -6.2088,
+      "lon": 106.8456
+    },
+    {
+      "name": "Manila",
+      "country": "Philippines",
+      "lat": 14.5995,
+      "lon": 120.9842
+    },
+    {
+      "name": "Ho Chi Minh City",
+      "country": "Vietnam",
+      "lat": 10.8231,
+      "lon": 106.6297
+    },
+    {
+      "name": "Hanoi",
+      "country": "Vietnam",
+      "lat": 21.0285,
+      "lon": 105.8542
+    },
+    {
+      "name": "Mumbai",
+      "country": "India",
+      "lat": 19.076,
+      "lon": 72.8777
+    },
+    {
+      "name": "Delhi",
+      "country": "India",
+      "lat": 28.7041,
+      "lon": 77.1025
+    },
+    {
+      "name": "Bangalore",
+      "country": "India",
+      "lat": 12.9716,
+      "lon": 77.5946
+    },
+    {
+      "name": "Chennai",
+      "country": "India",
+      "lat": 13.0827,
+      "lon": 80.2707
+    },
+    {
+      "name": "Kolkata",
+      "country": "India",
+      "lat": 22.5726,
+      "lon": 88.3639
+    },
+    {
+      "name": "Hyderabad",
+      "country": "India",
+      "lat": 17.385,
+      "lon": 78.4867
+    },
+    {
+      "name": "Pune",
+      "country": "India",
+      "lat": 18.5204,
+      "lon": 73.8567
+    },
+    {
+      "name": "Kathmandu",
+      "country": "Nepal",
+      "lat": 27.7172,
+      "lon": 85.324
+    },
+    {
+      "name": "Colombo",
+      "country": "Sri Lanka",
+      "lat": 6.9271,
+      "lon": 79.8612
+    },
+    {
+      "name": "Dhaka",
+      "country": "Bangladesh",
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    {
+      "name": "Sydney",
+      "country": "Australia",
+      "lat": -33.8688,
+      "lon": 151.2093
+    },
+    {
+      "name": "Melbourne",
+      "country": "Australia",
+      "lat": -37.8136,
+      "lon": 144.9631
+    },
+    {
+      "name": "Brisbane",
+      "country": "Australia",
+      "lat": -27.4698,
+      "lon": 153.0251
+    },
+    {
+      "name": "Perth",
+      "country": "Australia",
+      "lat": -31.9505,
+      "lon": 115.8605
+    },
+    {
+      "name": "Adelaide",
+      "country": "Australia",
+      "lat": -34.9285,
+      "lon": 138.6007
+    },
+    {
+      "name": "Auckland",
+      "country": "New Zealand",
+      "lat": -36.8509,
+      "lon": 174.7645
+    },
+    {
+      "name": "Wellington",
+      "country": "New Zealand",
+      "lat": -41.2866,
+      "lon": 174.7756
+    },
+    {
+      "name": "Christchurch",
+      "country": "New Zealand",
+      "lat": -43.5321,
+      "lon": 172.6362
+    },
+    {
+      "name": "Cairo",
+      "country": "Egypt",
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    {
+      "name": "Johannesburg",
+      "country": "South Africa",
+      "lat": -26.2041,
+      "lon": 28.0473
+    },
+    {
+      "name": "Cape Town",
+      "country": "South Africa",
+      "lat": -33.9249,
+      "lon": 18.4241
+    },
+    {
+      "name": "Durban",
+      "country": "South Africa",
+      "lat": -29.8587,
+      "lon": 31.0218
+    },
+    {
+      "name": "Lagos",
+      "country": "Nigeria",
+      "lat": 6.5244,
+      "lon": 3.3792
+    },
+    {
+      "name": "Abuja",
+      "country": "Nigeria",
+      "lat": 9.0765,
+      "lon": 7.3986
+    },
+    {
+      "name": "Nairobi",
+      "country": "Kenya",
+      "lat": -1.2921,
+      "lon": 36.8219
+    },
+    {
+      "name": "Casablanca",
+      "country": "Morocco",
+      "lat": 33.5731,
+      "lon": -7.5898
+    },
+    {
+      "name": "Marrakech",
+      "country": "Morocco",
+      "lat": 31.6295,
+      "lon": -7.9811
+    },
+    {
+      "name": "Tunis",
+      "country": "Tunisia",
+      "lat": 36.8065,
+      "lon": 10.1815
+    },
+    {
+      "name": "Algiers",
+      "country": "Algeria",
+      "lat": 36.7538,
+      "lon": 3.0588
+    },
+    {
+      "name": "Addis Ababa",
+      "country": "Ethiopia",
+      "lat": 9.032,
+      "lon": 38.7469
+    },
+    {
+      "name": "Dar es Salaam",
+      "country": "Tanzania",
+      "lat": -6.7924,
+      "lon": 39.2083
+    },
+    {
+      "name": "Accra",
+      "country": "Ghana",
+      "lat": 5.6037,
+      "lon": -0.187
+    },
+    {
+      "name": "Mexico City",
+      "country": "Mexico",
+      "lat": 19.4326,
+      "lon": -99.1332
+    },
+    {
+      "name": "Guadalajara",
+      "country": "Mexico",
+      "lat": 20.6597,
+      "lon": -103.3496
+    },
+    {
+      "name": "Monterrey",
+      "country": "Mexico",
+      "lat": 25.6866,
+      "lon": -100.3161
+    },
+    {
+      "name": "São Paulo",
+      "country": "Brazil",
+      "lat": -23.5505,
+      "lon": -46.6333
+    },
+    {
+      "name": "Rio de Janeiro",
+      "country": "Brazil",
+      "lat": -22.9068,
+      "lon": -43.1729
+    },
+    {
+      "name": "Brasília",
+      "country": "Brazil",
+      "lat": -15.8267,
+      "lon": -47.9218
+    },
+    {
+      "name": "Salvador",
+      "country": "Brazil",
+      "lat": -12.9714,
+      "lon": -38.5014
+    },
+    {
+      "name": "Belo Horizonte",
+      "country": "Brazil",
+      "lat": -19.9167,
+      "lon": -43.9345
+    },
+    {
+      "name": "Buenos Aires",
+      "country": "Argentina",
+      "lat": -34.6037,
+      "lon": -58.3816
+    },
+    {
+      "name": "Córdoba",
+      "country": "Argentina",
+      "lat": -31.4201,
+      "lon": -64.1888
+    },
+    {
+      "name": "Santiago",
+      "country": "Chile",
+      "lat": -33.4489,
+      "lon": -70.6693
+    },
+    {
+      "name": "Lima",
+      "country": "Peru",
+      "lat": -12.0464,
+      "lon": -77.0428
+    },
+    {
+      "name": "Bogotá",
+      "country": "Colombia",
+      "lat": 4.711,
+      "lon": -74.0721
+    },
+    {
+      "name": "Medellín",
+      "country": "Colombia",
+      "lat": 6.2476,
+      "lon": -75.5658
+    },
+    {
+      "name": "Caracas",
+      "country": "Venezuela",
+      "lat": 10.4806,
+      "lon": -66.9036
+    },
+    {
+      "name": "Quito",
+      "country": "Ecuador",
+      "lat": -0.1807,
+      "lon": -78.4678
+    },
+    {
+      "name": "Guayaquil",
+      "country": "Ecuador",
+      "lat": -2.1894,
+      "lon": -79.8875
+    },
+    {
+      "name": "Havana",
+      "country": "Cuba",
+      "lat": 23.1136,
+      "lon": -82.3666
+    },
+    {
+      "name": "Santo Domingo",
+      "country": "Dominican Republic",
+      "lat": 18.4861,
+      "lon": -69.9312
+    },
+    {
+      "name": "San Juan",
+      "country": "Puerto Rico",
+      "lat": 18.4655,
+      "lon": -66.1057
+    },
+    {
+      "name": "Panama City",
+      "country": "Panama",
+      "lat": 9.082,
+      "lon": -79.4971
+    },
+    {
+      "name": "San José",
+      "country": "Costa Rica",
+      "lat": 9.9281,
+      "lon": -84.0907
+    },
+    {
+      "name": "Guatemala City",
+      "country": "Guatemala",
+      "lat": 14.6349,
+      "lon": -90.5069
+    },
+    {
+      "name": "Tegucigalpa",
+      "country": "Honduras",
+      "lat": 14.0723,
+      "lon": -87.1921
+    },
+    {
+      "name": "Managua",
+      "country": "Nicaragua",
+      "lat": 12.1364,
+      "lon": -86.2514
+    },
+    {
+      "name": "San Salvador",
+      "country": "El Salvador",
+      "lat": 13.6929,
+      "lon": -89.2182
+    },
+    {
+      "name": "Halifax",
+      "country": "Canada",
+      "lat": 44.6488,
+      "lon": -63.5752
+    },
+    {
+      "name": "Barcelona",
+      "country": "Venezuela",
+      "lat": 10.1363,
+      "lon": -64.6862
+    },
+    {
+      "name": "Valencia",
+      "country": "Venezuela",
+      "lat": 10.167,
+      "lon": -68.0075
+    },
+    {
+      "name": "Curitiba",
+      "country": "Brazil",
+      "lat": -25.4284,
+      "lon": -49.2733
+    },
+    {
+      "name": "Porto Alegre",
+      "country": "Brazil",
+      "lat": -30.0346,
+      "lon": -51.2177
+    },
+    {
+      "name": "Recife",
+      "country": "Brazil",
+      "lat": -8.0476,
+      "lon": -34.877
+    },
+    {
+      "name": "Fortaleza",
+      "country": "Brazil",
+      "lat": -3.7172,
+      "lon": -38.5433
+    },
+    {
+      "name": "Montevideo",
+      "country": "Uruguay",
+      "lat": -34.9011,
+      "lon": -56.1645
+    },
+    {
+      "name": "La Paz",
+      "country": "Bolivia",
+      "lat": -16.4897,
+      "lon": -68.1193
+    },
+    {
+      "name": "Santa Cruz",
+      "country": "Bolivia",
+      "lat": -17.7863,
+      "lon": -63.1812
+    },
+    {
+      "name": "Asunción",
+      "country": "Paraguay",
+      "lat": -25.2637,
+      "lon": -57.5759
+    },
+    {
+      "name": "San Juan",
+      "country": "Argentina",
+      "lat": -31.5375,
+      "lon": -68.5364
+    },
+    {
+      "name": "Mendoza",
+      "country": "Argentina",
+      "lat": -32.8895,
+      "lon": -68.8458
+    },
+    {
+      "name": "Valparaíso",
+      "country": "Chile",
+      "lat": -33.0472,
+      "lon": -71.6127
+    },
+    {
+      "name": "Arequipa",
+      "country": "Peru",
+      "lat": -16.409,
+      "lon": -71.5375
+    },
+    {
+      "name": "Cusco",
+      "country": "Peru",
+      "lat": -13.5319,
+      "lon": -71.9675
+    },
+    {
+      "name": "Cartagena",
+      "country": "Colombia",
+      "lat": 10.3997,
+      "lon": -75.5144
+    },
+    {
+      "name": "Cali",
+      "country": "Colombia",
+      "lat": 3.4516,
+      "lon": -76.532
+    },
+    {
+      "name": "Barranquilla",
+      "country": "Colombia",
+      "lat": 10.9639,
+      "lon": -74.7964
+    },
+    {
+      "name": "Antwerp",
+      "country": "Belgium",
+      "lat": 51.2213,
+      "lon": 4.4051
+    },
+    {
+      "name": "Stuttgart",
+      "country": "Germany",
+      "lat": 48.7758,
+      "lon": 9.1829
+    },
+    {
+      "name": "Düsseldorf",
+      "country": "Germany",
+      "lat": 51.2277,
+      "lon": 6.7735
+    },
+    {
+      "name": "Leipzig",
+      "country": "Germany",
+      "lat": 51.3397,
+      "lon": 12.3731
+    },
+    {
+      "name": "Dortmund",
+      "country": "Germany",
+      "lat": 51.5136,
+      "lon": 7.4653
+    },
+    {
+      "name": "Bordeaux",
+      "country": "France",
+      "lat": 44.8378,
+      "lon": -0.5792
+    },
+    {
+      "name": "Toulouse",
+      "country": "France",
+      "lat": 43.6047,
+      "lon": 1.4442
+    },
+    {
+      "name": "Nice",
+      "country": "France",
+      "lat": 43.7102,
+      "lon": 7.262
+    },
+    {
+      "name": "Nantes",
+      "country": "France",
+      "lat": 47.2184,
+      "lon": -1.5536
+    },
+    {
+      "name": "Strasbourg",
+      "country": "France",
+      "lat": 48.5734,
+      "lon": 7.7521
+    },
+    {
+      "name": "Bilbao",
+      "country": "Spain",
+      "lat": 43.263,
+      "lon": -2.935
+    },
+    {
+      "name": "Malaga",
+      "country": "Spain",
+      "lat": 36.7213,
+      "lon": -4.4214
+    },
+    {
+      "name": "Palermo",
+      "country": "Italy",
+      "lat": 38.1157,
+      "lon": 13.3615
+    },
+    {
+      "name": "Genoa",
+      "country": "Italy",
+      "lat": 44.4056,
+      "lon": 8.9463
+    },
+    {
+      "name": "Bologna",
+      "country": "Italy",
+      "lat": 44.4949,
+      "lon": 11.3426
+    },
+    {
+      "name": "Venice",
+      "country": "Italy",
+      "lat": 45.4408,
+      "lon": 12.3155
+    },
+    {
+      "name": "Gdańsk",
+      "country": "Poland",
+      "lat": 54.352,
+      "lon": 18.6466
+    },
+    {
+      "name": "Wrocław",
+      "country": "Poland",
+      "lat": 51.1079,
+      "lon": 17.0385
+    },
+    {
+      "name": "Belgrade",
+      "country": "Serbia",
+      "lat": 44.7866,
+      "lon": 20.4489
+    },
+    {
+      "name": "Zagreb",
+      "country": "Croatia",
+      "lat": 45.815,
+      "lon": 15.9819
+    },
+    {
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "lat": 46.0569,
+      "lon": 14.5058
+    },
+    {
+      "name": "Tbilisi",
+      "country": "Georgia",
+      "lat": 41.7151,
+      "lon": 44.8271
+    },
+    {
+      "name": "Yerevan",
+      "country": "Armenia",
+      "lat": 40.1872,
+      "lon": 44.5152
+    },
+    {
+      "name": "Baku",
+      "country": "Azerbaijan",
+      "lat": 40.4093,
+      "lon": 49.8671
+    },
+    {
+      "name": "Almaty",
+      "country": "Kazakhstan",
+      "lat": 43.222,
+      "lon": 76.8512
+    },
+    {
+      "name": "Tashkent",
+      "country": "Uzbekistan",
+      "lat": 41.2995,
+      "lon": 69.2401
+    },
+    {
+      "name": "Karachi",
+      "country": "Pakistan",
+      "lat": 24.8607,
+      "lon": 67.0011
+    },
+    {
+      "name": "Lahore",
+      "country": "Pakistan",
+      "lat": 31.5204,
+      "lon": 74.3587
+    },
+    {
+      "name": "Islamabad",
+      "country": "Pakistan",
+      "lat": 33.6844,
+      "lon": 73.0479
+    },
+    {
+      "name": "Yangon",
+      "country": "Myanmar",
+      "lat": 16.8661,
+      "lon": 96.1951
+    },
+    {
+      "name": "Phnom Penh",
+      "country": "Cambodia",
+      "lat": 11.5564,
+      "lon": 104.9282
+    },
+    {
+      "name": "Vientiane",
+      "country": "Laos",
+      "lat": 17.9757,
+      "lon": 102.6331
+    },
+    {
+      "name": "Ulaanbaatar",
+      "country": "Mongolia",
+      "lat": 47.8864,
+      "lon": 106.9057
+    },
+    {
+      "name": "Macau",
+      "country": "China",
+      "lat": 22.20056,
+      "lon": 113.54611
+    }
+  ]
+}

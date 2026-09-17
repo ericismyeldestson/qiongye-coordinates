@@ -1,0 +1,27 @@
+{
+  "name": "astronomy-engine",
+  "version": "2.1.19",
+  "license": "MIT",
+  "sourceURL": "https://github.com/cosinekitty/astronomy",
+  "packageURL": "https://registry.npmjs.org/astronomy-engine/-/astronomy-engine-2.1.19.tgz",
+  "packageIntegrity": "sha512-8yWKNf7UeNbH458h3sAJ6ZgAjE5jTXp/mNNRFoC20j2SHwZIjAQeEsBB2Q3uCFRaTCCJRv33K2XhkhZQMXoX6w==",
+  "files": [
+    {
+      "file": "astronomy.js",
+      "sha256": "729c0ce37cc1a8096034a689039a5f04585ee8184177c638e8c74dec4fa3185a"
+    },
+    {
+      "file": "package.json",
+      "sha256": "d035702763839ae11f41600cf4b8210005672658dcb19cea4a09591078af4931"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "31e913dcab32e6e5d0aa1b5f32ab350a6ab91b273f7f38d4de83b54ee644de41"
+    }
+  ],
+  "modifications": "A reproducible function subset is generated for time, obliquity and sidereal time. Official function bodies are unchanged. All planet positions continue to use Swiss Ephemeris.",
+  "output": {
+    "file": "miniprogram/vendor/astronomy-time.js",
+    "sha256": "f1eb96c95754a41ab90feba4620d57e4cbfdfd486f60e8a47b4343a457613b55"
+  }
+}

@@ -1,8 +1,19 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "projectLicense": "AGPL-3.0-only",
-  "sourceURL": "https://github.com/ericismyeldestson/qiongye-coordinates/releases/tag/v0.4.0",
-  "sourceRef": "v0.4.0",
-  "sourcePublished": true,
-  "note": "Matching complete source is provided at the versioned public GitHub release. This records source availability, not WeChat review or app publication."
+  "sourceURL": "https://github.com/ericismyeldestson/qiongye-coordinates/releases/download/v0.4.1/qiongye-coordinates-0.4.1-source.tar.gz",
+  "sourceRef": "v0.4.1",
+  "sourcePublished": false,
+  "note": "Restores original recommendation behavior with independently implemented code. The original candidate compilation remains NOASSERTION; the maintainer has explicitly accepted publication with that unresolved source-license status for this version.",
+  "referencePublicationDecision": {
+    "status": "maintainer-accepted-unverified",
+    "version": "0.4.1",
+    "referenceSha256": "61f58469ca6c0d3b08fac8d5e2d453794f59818bb8feef0e51e08d5d05e16b17",
+    "date": "2026-09-17",
+    "destinations": [
+      "https://github.com/ericismyeldestson/qiongye-coordinates",
+      "wechat:wx722455555324595a"
+    ],
+    "note": "Explicit maintainer instruction to publish 0.4.1 with the unresolved candidate compilation license. This is a publication decision, not a license grant or redistribution clearance."
+  }
 }

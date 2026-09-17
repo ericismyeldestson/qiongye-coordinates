@@ -1,4 +1,5 @@
 const factory = require('../vendor/qy-swisseph');
+const astronomy = require('../vendor/astronomy-time');
 const {equatorial,planetaryLines}=require('./sky-lines');
 const {coordinates,UTC_MIN,UTC_MAX}=require('./birth');
 const BODIES = [
@@ -51,7 +52,11 @@ function createEngine(m) {
       if(!Number.isFinite(date.getTime()))throw Error('请检查日期和经纬度');
       coordinates(lat,lon);
       if(date.getTime()<UTC_MIN||date.getTime()>=UTC_MAX)throw Error('当前支持当地出生日期 1900—2099 年');
-      const jd=date.getTime()/86400000+2440587.5,orientation=this.orientation(jd);
+      // Original date/orientation conventions, from official MIT Astronomy Engine.
+      // Planet positions and houses continue to use official Swiss Ephemeris.
+      const time=astronomy.MakeTime((date.getTime()-Date.UTC(2000,0,1,12))/86400000),tilt=astronomy.e_tilt(time);
+      const jd=time.ut+2451545;
+      const orientation={trueObliquity:tilt.tobl,meanObliquity:tilt.mobl,sidereal:15*astronomy.SiderealTime(time)};
       const lines=[],bodies=[];
       for(const body of BODIES) {
         const p=this.position(jd,body.body,2),eq=equatorial(norm(p.longitude),p.latitude,orientation.trueObliquity);
@@ -62,7 +67,7 @@ function createEngine(m) {
       if(lines.length!==48)throw Error('行星线计算不完整');
       let houses=null,houseError='';
       try {houses=this.houses(jd,lat,lon,system);} catch(error) {houseError=error.message;}
-      return {utc:date.toISOString(),jd,latitude:lat,longitude:lon,obliquity:orientation.meanObliquity,lines,bodies,houses,houseError,engine:'Swiss Ephemeris '+this.version+' · 官方源码构建',method:'qy-in-mundo-v1'};
+      return {utc:date.toISOString(),jd,latitude:lat,longitude:lon,obliquity:orientation.meanObliquity,lines,bodies,houses,houseError,engine:'Swiss Ephemeris '+this.version+' · 官方源码构建',method:'browser-in-mundo-compatible-v1'};
     }
   };
   return engine;
