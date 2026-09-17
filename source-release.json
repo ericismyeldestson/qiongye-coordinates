@@ -3,7 +3,7 @@
   "projectLicense": "AGPL-3.0-only",
   "sourceURL": "https://github.com/ericismyeldestson/qiongye-coordinates/releases/download/v0.4.1/qiongye-coordinates-0.4.1-source.tar.gz",
   "sourceRef": "v0.4.1",
-  "sourcePublished": false,
+  "sourcePublished": true,
   "note": "Restores original recommendation behavior with independently implemented code. The original candidate compilation remains NOASSERTION; the maintainer has explicitly accepted publication with that unresolved source-license status for this version.",
   "referencePublicationDecision": {
     "status": "maintainer-accepted-unverified",
@@ -15,5 +15,6 @@
       "wechat:wx722455555324595a"
     ],
     "note": "Explicit maintainer instruction to publish 0.4.1 with the unresolved candidate compilation license. This is a publication decision, not a license grant or redistribution clearance."
-  }
+  },
+  "sourceCommitBeforeRelease": "2756581e65408936f66982a2ccd3c15a320fee30"
 }
